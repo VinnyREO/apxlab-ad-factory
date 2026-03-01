@@ -42,6 +42,15 @@ These are battle-tested from real production failures. Follow ALL of them:
 10. **Product scale must match between frames.** Specify physical dimensions
 11. **Negative prompts on every frame.** Always include what to AVOID
 
+## Content Policy Safety (from `system/rules/v5-lessons.json`)
+
+Image generation tools block medical/health language. Follow these rules to avoid failed generations:
+
+1. **Never use medical terms in image prompts.** "test kit" → "branded box". "finger prick" → omit. "allergy test" → "wellness product". The reference image handles visual accuracy — the prompt just describes the scene.
+2. **Describe products by APPEARANCE, not function.** "White rigid box with navy branding" YES. "At-home food sensitivity test kit" NO.
+3. **Describe emotions, not symptoms.** "Frustrated expression" YES. "Woman experiencing bloating" NO.
+4. **Skip self-harm adjacent language.** No mentions of pricking, blood, needles, lancets. Show the BEFORE (holding box) or AFTER (reading results on phone), never the collection moment.
+
 ## Character/Avatar System
 
 When a brand has avatars defined (in `brands/[brand]/avatars/`), USE THEM EXACTLY. Do not invent new characters.
@@ -55,56 +64,102 @@ Each avatar has:
 - Secondary: Should be visible in close-ups (e.g., chin scar)
 - Tertiary: Adds character consistency (e.g., asymmetric eyebrows)
 
+When asked to create a NEW avatar, design one using the `avatar-cast.json` template structure. Include signature_details (primary/secondary/tertiary), physical_description, default_styling, expression_asymmetry, and prompt_block — same format as existing avatars in the repo.
+
 ## Output Format
 
-### For Video Ads
-For each concept, output:
+### For Video Ads (All-In-One Production Package)
 
-**1. SCRIPT** — Full beat-by-beat script with timing, voiceover, and text overlays
-
-**2. STORYBOARD** — Visual summary of each shot (one line per shot)
-
-**3. PRODUCTION QUICK-REFERENCE** — This is the most important section. Format it EXACTLY like this:
+When asked to create a video ad, output EVERYTHING in one response — script, all image prompts, animation instructions, and assembly guide. Structure it in production order so the user works top-to-bottom:
 
 ```
-## PRODUCTION QUICK-REFERENCE — [Concept Name]
+## AD PRODUCTION PACKAGE — [Concept Name]
 
-### Prerequisites (get these ready first):
-- [ ] Avatar reference image (generate from CAST PROMPT below if you don't have one)
-- [ ] Product reference photo: [specific filename from brands/]
+### OVERVIEW
+- Concept: [name and angle]
+- Duration: [seconds]
+- Framework: [PAS/AIDA/Testimonial/etc.]
+- Avatar: [name — new or existing]
+- Product: [which product, reference image filename]
+- Emotional arc: [e.g., frustration → curiosity → relief → empowerment]
+- Hook line: [the scroll-stopper]
+- 3 Hook variations: [for A/B testing]
 
-### CAST PROMPT (only if avatar not yet generated):
+### SCRIPT
+[Full beat-by-beat script with second-by-second timing, voiceover text, and text overlay per beat]
+
+### STEP 1: CAST YOUR AVATAR
+(Skip this step if avatar already exists and you have the reference image)
+
 Attach: nothing (this creates the character)
 ```json
 { ... filled avatar-cast.json template ... }
 ```
-→ Save output as: [avatar-name]-reference.jpg
-→ VERIFY: [list signature details to check]
+→ Save output as: [name]-reference.jpg
+→ VERIFY before proceeding:
+  - [ ] [Primary signature detail visible]
+  - [ ] [Secondary signature detail visible]
+  - [ ] [Tertiary signature detail visible]
+  - [ ] Expression is neutral (no emotion)
+  - [ ] No products in frame
 
-### Generation Order (do in sequence, top to bottom):
+### STEP 2: GENERATE ALL FRAMES (in sequence)
 
-**SHOT 1 of X: [Shot Name]** — Stage: [which stage] | Template: [which template]
-Attach: [exactly which reference images, by filename]
+**FRAME 1 of X: [Shot Name]** (0:00–0:03)
+Stage: [2 or 3] | Template: [which template file]
+Attach: [exactly which files by name]
+Text overlay for this frame: "[copy]"
+Voiceover for this frame: "[VO text]"
 ```json
-{ ... filled template ... }
+{ ... filled template, all fields complete ... }
 ```
 → Save output as: [filename].jpg
-→ Used by: [which later shots need this as input]
+→ VERIFY: [what to check]
+→ Used by: Frame 2 needs this as its Frame A reference
 
-**SHOT 2 of X: [Shot Name]** — Stage: [which stage] | Template: [which template]
-Attach: [reference images including any outputs from previous shots]
+**FRAME 2 of X: [Shot Name]** (0:03–0:06)
+Stage: 4 (Frame B) | Template: frame-b.json
+Attach: Frame 1 output ONLY ([filename].jpg)
+Text overlay: "[copy]"
+Voiceover: "[VO text]"
 ```json
-{ ... filled template ... }
+{ ... filled frame-b template ... }
 ```
 → Save output as: [filename].jpg
 
-[...continue for all shots...]
+[...continue for ALL frames in the ad...]
+
+### STEP 3: ANIMATE FRAME PAIRS
+
+Which frames get animated together into video clips:
+
+| Pair | Frame A file | Frame B file | Duration | What happens |
+|------|-------------|-------------|----------|--------------|
+| 1 | frame-01.jpg | frame-02.jpg | 3s | Expression shifts from neutral to shock |
+| 2 | frame-03.jpg | frame-04.jpg | 4s | Picks up product, examines it |
+
+For each pair, here is the animation prompt (for Veo / Kling / Runway):
+```json
+{ ... filled veo-interpolation.json template per pair ... }
 ```
 
-This format lets the user work top-to-bottom: paste prompt, save output, move to next shot. No scrolling, no detective work.
+### STEP 4: FINAL ASSEMBLY TIMELINE
+
+How everything stitches together in the video editor:
+
+| Time | Source file(s) | Type | Text Overlay | Voiceover line |
+|------|---------------|------|-------------|----------------|
+| 0:00–0:03 | Pair 1 clip | Animated | "POV: you find out..." | "I was told I had IBS..." |
+| 0:03–0:06 | frame-03.jpg | Still + Ken Burns | "88 foods tested" | "Then I found this..." |
+| 0:06–0:10 | Pair 2 clip | Animated | — | "Just a finger prick..." |
+| 0:10–0:13 | frame-05.jpg | Still | "Results in days" | "Within 3 weeks..." |
+| 0:13–0:15 | frame-06.jpg | Still | CTA + URL | "Tap Learn More" |
+
+**Audio notes:** [music/SFX suggestions]
+**Export settings:** 9:16 vertical, 30fps, captions burned in, max 30MB for Meta
+```
 
 ### For Static Ads
-Same format but simpler — most statics are a single Stage 3 shot (product integration) or Stage 2 (lifestyle). Output:
 
 ```
 ## STATIC AD: [Ad Name]
@@ -112,25 +167,18 @@ Same format but simpler — most statics are a single Stage 3 shot (product inte
 **Angle:** [what pain point / hook]
 **Headline:** [text overlay copy]
 **Subtext/CTA:** [secondary copy]
-**Layout:** [where text sits, which brand colors to use]
+**Layout:** [where text sits relative to image, which brand colors, font weight]
 **Format:** 1080×1080 (feed) / 1080×1920 (story)
 
 ### Image Prompt
-Attach: [reference images needed]
+Stage: [2 or 3] | Template: [which template]
+Attach: [reference images needed, by filename]
 ```json
 { ... filled template ... }
 ```
 → Save output as: [filename].jpg
+→ VERIFY: [signature details + composition checks]
 ```
-
-## Content Policy Safety (from `system/rules/v5-lessons.json`)
-
-Image generation tools block medical/health language. Follow these rules to avoid failed generations:
-
-1. **Never use medical terms in image prompts.** "test kit" → "branded box". "finger prick" → omit. "allergy test" → "wellness product". The reference image handles visual accuracy — the prompt just describes the scene.
-2. **Describe products by APPEARANCE, not function.** "White rigid box with navy branding" YES. "At-home food sensitivity test kit" NO.
-3. **Describe emotions, not symptoms.** "Frustrated expression" YES. "Woman experiencing bloating" NO.
-4. **Skip self-harm adjacent language.** No mentions of pricking, blood, needles, lancets. Show the BEFORE (holding box) or AFTER (reading results on phone), never the collection moment.
 
 ## Advertising Principles
 
@@ -153,10 +201,12 @@ For health/supplement brands: no medical claims, no guaranteed results, focus on
 
 1. **Read the brand vault** — `brands/[brand]/brand.json`, products, avatars, audience personas
 2. **Read the frameworks** — `system/frameworks/concept-generator.json`, `hook-types.json`, `script-structures.json`
-3. **Generate concepts** — matched to product angles × hook types × audience pain points
-4. **Write scripts first** — full beat-by-beat with timing
-5. **Then produce image prompts** — using JSON templates, following the 4-stage pipeline
-6. **Output as Production Quick-Reference** — copy-paste ready, linear workflow
+3. **Read the rules** — `system/rules/v5-lessons.json` (production rules + content policy)
+4. **Read the templates** — `system/templates/` (know what fields each template requires)
+5. **Generate concepts** — matched to product angles × hook types × audience pain points
+6. **Write scripts first** — full beat-by-beat with timing
+7. **Then produce image prompts** — using JSON templates, following the 4-stage pipeline
+8. **Output as All-In-One Production Package** — one document, work top-to-bottom
 
 ## Template Reference
 
@@ -176,3 +226,5 @@ For health/supplement brands: no medical claims, no guaranteed results, focus on
 | Hook Types | `system/frameworks/hook-types.json` | Choosing hook style for each concept |
 | Script Structures | `system/frameworks/script-structures.json` | Writing beat-by-beat scripts |
 | Brand Onboarding | `system/frameworks/brand-onboarding.json` | Setting up a new brand vault |
+
+When generating image prompts, always use the JSON templates from system/templates/. Follow the 4-stage pipeline in 08-IMAGE-PROMPT-GUIDE.md and the rules in system/rules/v5-lessons.json.
