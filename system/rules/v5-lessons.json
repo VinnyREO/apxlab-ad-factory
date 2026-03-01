@@ -2,7 +2,6 @@
   "_rules": "V5_BATTLE_TESTED_LESSONS",
   "_version": "5.0",
   "_description": "Every rule in this file was learned from an actual generation failure. These are NOT theoretical.",
-
   "pipeline_rules": [
     {
       "id": "R001",
@@ -14,7 +13,7 @@
       "id": "R002",
       "rule": "Stage the pipeline. One layer at a time",
       "failure": "Combined character + expression + environment + product in one prompt. When image looked wrong, couldn't diagnose which element failed",
-      "enforcement": "Character cast (neutral) → Scene test (no product) → Product integration → Frame B"
+      "enforcement": "Character cast (neutral) \u2192 Scene test (no product) \u2192 Product integration \u2192 Frame B"
     },
     {
       "id": "R003",
@@ -23,7 +22,6 @@
       "enforcement": "Template 1 has no mood/reaction fields. Only subject and camera"
     }
   ],
-
   "prompting_rules": [
     {
       "id": "R004",
@@ -50,7 +48,6 @@
       "enforcement": "Character cast template requires primary, secondary, tertiary signature details with tier classification"
     }
   ],
-
   "product_rules": [
     {
       "id": "R008",
@@ -71,7 +68,6 @@
       "enforcement": "Frame B template includes product_scale_consistency block with physics rule"
     }
   ],
-
   "reference_image_rules": [
     {
       "id": "R011",
@@ -86,14 +82,81 @@
       "enforcement": "All selfie templates: 'phone below frame, NOT visible' + 'phone visible in frame' in negative prompt"
     }
   ],
-
   "negative_prompt_library": {
-    "optical_fakes": ["background blur", "bokeh", "bokeh balls", "shallow depth of field", "portrait mode", "gaussian blur on background", "DSLR quality"],
-    "lighting_fakes": ["studio lighting", "ring light", "ring light catch lights", "softbox", "beauty dish", "three-point lighting"],
-    "skin_fakes": ["perfect skin", "porcelain skin", "airbrushed", "smooth skin filter", "beauty mode", "facetune", "pore removal"],
-    "composition_fakes": ["perfectly centered", "symmetrical face", "model pose", "stock photo", "editorial"],
-    "product_fakes": ["product perfectly facing camera", "product display pose", "product floating", "product separately lit"],
-    "phone_fakes": ["phone visible in frame", "mirror selfie"],
-    "expression_fakes": ["exaggerated surprise", "theatrical expression", "wide open mouth", "bug eyes"]
-  }
+    "optical_fakes": [
+      "background blur",
+      "bokeh",
+      "bokeh balls",
+      "shallow depth of field",
+      "portrait mode",
+      "gaussian blur on background",
+      "DSLR quality"
+    ],
+    "lighting_fakes": [
+      "studio lighting",
+      "ring light",
+      "ring light catch lights",
+      "softbox",
+      "beauty dish",
+      "three-point lighting"
+    ],
+    "skin_fakes": [
+      "perfect skin",
+      "porcelain skin",
+      "airbrushed",
+      "smooth skin filter",
+      "beauty mode",
+      "facetune",
+      "pore removal"
+    ],
+    "composition_fakes": [
+      "perfectly centered",
+      "symmetrical face",
+      "model pose",
+      "stock photo",
+      "editorial"
+    ],
+    "product_fakes": [
+      "product perfectly facing camera",
+      "product display pose",
+      "product floating",
+      "product separately lit"
+    ],
+    "phone_fakes": [
+      "phone visible in frame",
+      "mirror selfie"
+    ],
+    "expression_fakes": [
+      "exaggerated surprise",
+      "theatrical expression",
+      "wide open mouth",
+      "bug eyes"
+    ]
+  },
+  "content_policy_rules": [
+    {
+      "id": "CP001",
+      "rule": "Never use medical language in image prompts",
+      "failure": "2 of 4 generations blocked by content policy when prompt mentioned test kit, finger prick, blood, allergy test",
+      "enforcement": "Replace medical terms with neutral visual descriptions: test kit \u2192 branded box, finger prick \u2192 (omit entirely), blood \u2192 (omit), allergy test \u2192 wellness product, health test \u2192 branded kit. The REFERENCE IMAGE shows what the product looks like \u2014 the prompt just needs to describe the scene and how she holds it."
+    },
+    {
+      "id": "CP002",
+      "rule": "Describe products by PHYSICAL appearance, not by function",
+      "failure": "Describing what a product DOES in image prompts triggers medical/health content filters",
+      "enforcement": "In image prompts: \"white rigid box with navy branding\" YES. \"at-home food sensitivity test kit\" NO. \"wellness supplement pouch\" \u2192 \"flexible matte pouch with green label\". Let the reference image handle brand accuracy."
+    },
+    {
+      "id": "CP003",
+      "rule": "Avoid symptom language in image prompts",
+      "failure": "Words like bloating, pain, allergic reaction, medical symptoms can trigger safety filters",
+      "enforcement": "Describe the EMOTION not the medical context. \"frustrated expression\" YES. \"woman experiencing bloating pain\" NO. \"looking tired and uncomfortable\" YES. \"suffering from allergy symptoms\" NO."
+    },
+    {
+      "id": "CP004",
+      "rule": "No self-harm adjacent language in image prompts",
+      "failure": "Finger prick, blood collection, needle, lancet \u2014 all can trigger self-harm filters",
+      "enforcement": "Never mention pricking, blood, needles, or collection devices in image prompts. If the script calls for a collection scene, show the BEFORE (holding the box) or AFTER (looking at results on phone). Skip the actual collection moment in generated images \u2014 use real video footage for that."
+    }
+  ]
 }

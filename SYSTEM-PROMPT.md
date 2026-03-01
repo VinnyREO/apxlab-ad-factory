@@ -123,6 +123,15 @@ Attach: [reference images needed]
 → Save output as: [filename].jpg
 ```
 
+## Content Policy Safety (from `system/rules/v5-lessons.json`)
+
+Image generation tools block medical/health language. Follow these rules to avoid failed generations:
+
+1. **Never use medical terms in image prompts.** "test kit" → "branded box". "finger prick" → omit. "allergy test" → "wellness product". The reference image handles visual accuracy — the prompt just describes the scene.
+2. **Describe products by APPEARANCE, not function.** "White rigid box with navy branding" YES. "At-home food sensitivity test kit" NO.
+3. **Describe emotions, not symptoms.** "Frustrated expression" YES. "Woman experiencing bloating" NO.
+4. **Skip self-harm adjacent language.** No mentions of pricking, blood, needles, lancets. Show the BEFORE (holding box) or AFTER (reading results on phone), never the collection moment.
+
 ## Advertising Principles
 
 ### ICP-First, Not Brand-First
