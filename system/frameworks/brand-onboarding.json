@@ -3,7 +3,6 @@
   "_version": "5.0",
   "_description": "Step-by-step process for onboarding a new brand into the APXlab system. Input: website URL. Output: complete brand vault ready for ad production.",
   "_trigger": "User says 'onboard [brand name]' or 'new brand: [url]'",
-
   "phase_1_discovery": {
     "name": "Website Scrape & Intel Gathering",
     "steps": [
@@ -60,7 +59,6 @@
       }
     ]
   },
-
   "phase_2_product_analysis": {
     "name": "Star Product Selection",
     "steps": [
@@ -86,10 +84,30 @@
           "The star product should have the broadest audience appeal within the target demo"
         ],
         "output": "Star product identified with reasoning"
+      },
+      {
+        "step": 7,
+        "action": "Document product physical specs for image generation",
+        "required_fields": {
+          "packaging_type": "Box, bottle, pouch, tube, etc.",
+          "material": "Cardboard, plastic, glass, flexible pouch, etc.",
+          "dimensions": "Width, height, depth in cm AND inches",
+          "colors": "Exact packaging colors with hex codes if possible",
+          "label_elements": "What text/logos/graphics are on the label",
+          "scale_in_hand": "How big is it relative to a human hand? Hardcover book? iPhone? Pill bottle?",
+          "weight_feel": "Does it sag? Is it rigid? Would someone hold it differently than expected?",
+          "visual_description": "Overall look \u2014 minimal, busy, medical, consumer, premium, budget?"
+        },
+        "rules": [
+          "ALWAYS fill scale_in_hand \u2014 image gen models need physical context to size products correctly",
+          "Get dimensions from the actual product or website product page",
+          "If exact dimensions unavailable, estimate from product photos using known objects for scale",
+          "Note packaging orientation: portrait, landscape, square, cylindrical"
+        ],
+        "output": "Complete packaging block in product.json \u2014 used by all image generation templates"
       }
     ]
   },
-
   "phase_3_vault_creation": {
     "name": "Build Brand Vault Files",
     "steps": [
@@ -161,7 +179,6 @@
       }
     ]
   },
-
   "phase_4_validation": {
     "name": "Vault Quality Check",
     "steps": [
@@ -182,18 +199,23 @@
         "action": "Present onboarding summary to user",
         "output_format": {
           "brand_name": "[name]",
-          "websites": ["list all"],
-          "products_found": ["name — $price each"],
-          "star_product": "[name] — [why]",
-          "primary_persona": "[name] — [1 sentence]",
+          "websites": [
+            "list all"
+          ],
+          "products_found": [
+            "name \u2014 $price each"
+          ],
+          "star_product": "[name] \u2014 [why]",
+          "primary_persona": "[name] \u2014 [1 sentence]",
           "product_images": "[count] images saved",
-          "missing_items": ["anything we still need from client"],
+          "missing_items": [
+            "anything we still need from client"
+          ],
           "recommended_next_step": "Generate 10 ad concepts for [star product] targeting [persona]"
         }
       }
     ]
   },
-
   "phase_5_fast_track": {
     "name": "Optional: Immediate Concept Generation",
     "description": "If user wants to move fast, skip approval and go straight to concepts",
@@ -210,7 +232,6 @@
       }
     ]
   },
-
   "future_automation": {
     "image_auto_download": {
       "status": "NOT YET BUILT",
