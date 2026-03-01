@@ -1,0 +1,103 @@
+{
+  "_framework": "HOOK_TYPES",
+  "_version": "5.0",
+  "_description": "Proven UGC hook frameworks for ad concepts. Used by the concept generator to create ad ideas matched to brand + product + audience.",
+
+  "hooks": {
+    "shocked_discovery": {
+      "name": "Shocked Discovery",
+      "description": "Character discovers something unexpected about the product's effect. The 'wait, is this actually working?' moment",
+      "emotional_arc": "Frozen shock → processing → realization → excitement",
+      "duration": "3-5 second hook, 10-15 second full ad",
+      "best_for": ["Skincare results", "Supplement effects", "Before/after transformations", "Unexpected quality"],
+      "text_overlay_examples": ["POV: day 14 of this shake", "when the supplement actually works", "me realizing I haven't felt this good in years"],
+      "frame_sequence": ["Reaction start (shocked, holding product)", "Reaction peak (leaning in / smile breaking)", "Product close-up", "Testimonial / CTA"],
+      "tested": true,
+      "performance_notes": "Strong hook rate. The frozen moment creates curiosity gap"
+    },
+
+    "skeptic_to_believer": {
+      "name": "Skeptic to Believer",
+      "description": "Character starts doubtful, ends convinced. The conversion arc",
+      "emotional_arc": "Eye roll / doubt → trying it → surprise → genuine recommendation",
+      "duration": "10-15 seconds",
+      "best_for": ["Products with skepticism barrier", "Competitive switching (from AG1, etc)", "Premium-priced items that need justification"],
+      "text_overlay_examples": ["I thought this was just another overpriced supplement", "my friend wouldn't stop talking about this so I tried it", "ok I owe everyone an apology"],
+      "frame_sequence": ["Skeptical face (arms crossed or eye roll)", "Trying product (mixing shake, taking pill)", "Surprised reaction", "Genuine smile / recommendation"],
+      "tested": false,
+      "performance_notes": null
+    },
+
+    "secret_share": {
+      "name": "Secret Share",
+      "description": "Character leans in to share something they don't want everyone to know about. Conspiratorial, exclusive energy",
+      "emotional_arc": "Checking surroundings → leaning in → whispering/sharing → 'trust me' nod",
+      "duration": "5-10 seconds",
+      "best_for": ["Products that feel like insider knowledge", "Deal/discount hooks", "Niche products not everyone knows about"],
+      "text_overlay_examples": ["don't let this go viral but...", "the supplement my nutritionist actually takes", "ok I'm gatekeeping this but you need to know"],
+      "frame_sequence": ["Looking around (checking if anyone's watching)", "Lean in close to camera", "Showing/holding product", "Direct address recommendation"],
+      "tested": false,
+      "performance_notes": null
+    },
+
+    "mind_blown": {
+      "name": "Mind Blown",
+      "description": "Character just learned something that changes how they think about the product/category. Information revelation",
+      "emotional_arc": "Reading/watching something → eyes widen → processing → 'oh my god' realization",
+      "duration": "3-5 second hook",
+      "best_for": ["Ingredient comparisons", "Price breakdowns", "Scientific backing", "Myth-busting"],
+      "text_overlay_examples": ["when you find out what's actually in AG1 vs this", "POV: you just calculated the cost per ingredient", "me reading the actual research on this"],
+      "frame_sequence": ["Looking at phone/screen (reading)", "Expression shift (eyes widening)", "Looking at camera (sharing the revelation)", "Product show or CTA"],
+      "tested": true,
+      "performance_notes": "Works well for comparison/education hooks"
+    },
+
+    "morning_routine": {
+      "name": "Morning Routine",
+      "description": "Character shows their morning routine featuring the product. Aspirational but achievable. 'Day in my life' energy",
+      "emotional_arc": "Waking up → routine steps → product moment → feeling good / ready for day",
+      "duration": "15-30 seconds",
+      "best_for": ["Daily-use products", "Supplements", "Skincare", "Anything that fits into a routine"],
+      "text_overlay_examples": ["my non-negotiable morning routine", "5am morning routine that changed my energy", "the one thing I never skip"],
+      "frame_sequence": ["Waking up / kitchen", "Making the shake/taking supplement", "Product close-up with claims", "Feeling good / leaving for day / CTA"],
+      "tested": false,
+      "performance_notes": null
+    },
+
+    "problem_agitate_solve": {
+      "name": "Problem → Agitate → Solve",
+      "description": "Start with the pain point, make it worse, then present the product as the solution",
+      "emotional_arc": "Frustrated → more frustrated → discovery → relief / satisfaction",
+      "duration": "10-15 seconds",
+      "best_for": ["Products that solve clear pain points", "Simplification products", "Products replacing complicated routines"],
+      "text_overlay_examples": ["I was spending $150/month on 5 different supplements", "my cabinet looked like a pharmacy", "then I found the one that replaces them all"],
+      "frame_sequence": ["Showing the problem (too many bottles, complicated routine)", "Frustration reaction", "Product introduction", "Simple solution demo + CTA"],
+      "tested": false,
+      "performance_notes": null
+    },
+
+    "before_after_subtle": {
+      "name": "Before/After (Subtle)",
+      "description": "Two frames showing subtle, believable change. NOT dramatic transformation. Real results energy",
+      "emotional_arc": "Tired/dull (before) → healthier/brighter (after). The difference is REAL not magical",
+      "duration": "5-10 seconds",
+      "best_for": ["Skincare", "Supplements with visible effects", "Energy/mood products"],
+      "text_overlay_examples": ["2 weeks apart", "same lighting, same camera, different glow", "the subtle difference no one talks about"],
+      "frame_sequence": ["Before frame (slightly dull, tired)", "After frame (healthier, brighter, subtle)", "Product reveal", "CTA"],
+      "tested": false,
+      "performance_notes": "CRITICAL: subtle differences only. Dramatic = fake = scroll"
+    },
+
+    "unboxing_first_impression": {
+      "name": "Unboxing / First Impression",
+      "description": "Opening the product for the first time. Genuine first reaction to packaging, smell, taste",
+      "emotional_arc": "Curious → opening → first impression → surprised by quality",
+      "duration": "10-20 seconds",
+      "best_for": ["Premium products", "Products with great packaging", "Food/drink products with taste element"],
+      "text_overlay_examples": ["finally trying the shake everyone's been talking about", "first impression of LYFEfuel", "is this worth $2 a serving? let's find out"],
+      "frame_sequence": ["Holding sealed product", "Opening/preparing", "First taste/use reaction", "Verdict + CTA"],
+      "tested": false,
+      "performance_notes": null
+    }
+  }
+}

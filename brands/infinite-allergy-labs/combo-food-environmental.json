@@ -1,0 +1,31 @@
+{
+  "product": {
+    "name": "Food Allergy Sensitivity + Environmental (Combo)",
+    "type": "Combined food + environmental allergy testing kit",
+    "sku": "COMBO-176",
+    "store_url": "https://infinitewellnessusa.com/shop/",
+
+    "pricing": {
+      "self_pay": "$599.99",
+      "value_vs_separate": "Buying both separately = $449 + $299 = $748. Combo saves $148",
+      "with_insurance": "May be covered with out-of-network benefits"
+    },
+
+    "what_it_tests": {
+      "total_antigens": "176 (88 food + 88 environmental)",
+      "food_pathways": "IgE, IgG, IgG4, C3b/d",
+      "environmental_pathways": "IgE",
+      "key_claim": "The most comprehensive allergy and sensitivity test available. Tests everything — food AND environmental, immediate AND delayed reactions"
+    },
+
+    "ad_angles": {
+      "strongest_hooks": [
+        "The 'test everything at once' convenience angle",
+        "Save $148 vs buying separately",
+        "Complete picture — food AND environment — in one test"
+      ]
+    },
+
+    "notes": "This is likely the best product to push in ads because highest AOV and best value story. The savings angle ($148 off) gives a built-in reason to upgrade"
+  }
+}

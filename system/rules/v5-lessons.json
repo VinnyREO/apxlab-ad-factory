@@ -1,0 +1,99 @@
+{
+  "_rules": "V5_BATTLE_TESTED_LESSONS",
+  "_version": "5.0",
+  "_description": "Every rule in this file was learned from an actual generation failure. These are NOT theoretical.",
+
+  "pipeline_rules": [
+    {
+      "id": "R001",
+      "rule": "Script before images. Always",
+      "failure": "Generated Frame A without script, had to regenerate when script required product in hand",
+      "enforcement": "Never open image gen tool before script.json exists for the campaign"
+    },
+    {
+      "id": "R002",
+      "rule": "Stage the pipeline. One layer at a time",
+      "failure": "Combined character + expression + environment + product in one prompt. When image looked wrong, couldn't diagnose which element failed",
+      "enforcement": "Character cast (neutral) → Scene test (no product) → Product integration → Frame B"
+    },
+    {
+      "id": "R003",
+      "rule": "Character cast uses neutral expression ONLY",
+      "failure": "Generated character in reaction scene. Model prioritized matching the emotion over creating a distinctive face",
+      "enforcement": "Template 1 has no mood/reaction fields. Only subject and camera"
+    }
+  ],
+
+  "prompting_rules": [
+    {
+      "id": "R004",
+      "rule": "Always use JSON prompt structure, never flat paragraphs",
+      "failure": "Paragraph prompts produced inconsistent, less precise results",
+      "enforcement": "All templates are JSON. No paragraph prompt templates exist"
+    },
+    {
+      "id": "R005",
+      "rule": "Expression intensity at 30% of what you think you need",
+      "failure": "Full-intensity surprise prompt produced theatrical, stock-photo-like expressions",
+      "enforcement": "mood.facial_expression must specify mm of mouth opening, exact eyebrow movement, and SECOND of emotion (0.3 = subtle, 2.0 = performative)"
+    },
+    {
+      "id": "R006",
+      "rule": "Gaze 2-3 degrees off-camera for selfie authenticity",
+      "failure": "Dead-center lens contact felt posed and AI-like",
+      "enforcement": "All selfie templates include 'looking slightly off-camera at phone screen' in head_and_gaze"
+    },
+    {
+      "id": "R007",
+      "rule": "Signature details on every character (2-3 unique identifiers)",
+      "failure": "Generic descriptions produced different-looking people each generation. No way to verify character lock",
+      "enforcement": "Character cast template requires primary, secondary, tertiary signature details with tier classification"
+    }
+  ],
+
+  "product_rules": [
+    {
+      "id": "R008",
+      "rule": "Products from reference images, never from text descriptions",
+      "failure": "Text-described supplement bottle was generic, wrong colors, wrong label. Immediately reads as AI",
+      "enforcement": "Template 3 requires PRODUCT_REFERENCE image. No text-only product generation"
+    },
+    {
+      "id": "R009",
+      "rule": "Product scale must be specified with physical dimensions",
+      "failure": "Model guessed product size. Got lucky once but will be wrong for different product types",
+      "enforcement": "product_physical block required with height, width, material, scale_reference"
+    },
+    {
+      "id": "R010",
+      "rule": "Product scale must be consistent between Frame A and Frame B",
+      "failure": "Frame B (subject leaned closer) had product SMALLER than Frame A. Physically impossible",
+      "enforcement": "Frame B template includes product_scale_consistency block with physics rule"
+    }
+  ],
+
+  "reference_image_rules": [
+    {
+      "id": "R011",
+      "rule": "Frame B needs ONLY Frame A as reference. One image, not two",
+      "failure": "Sending Frame A + separate product image was redundant (product already in Frame A) and risked model confusion",
+      "enforcement": "Frame B template specifies single image with combined role"
+    },
+    {
+      "id": "R012",
+      "rule": "Phone NOT visible in frame for front-camera selfies",
+      "failure": "Model rendered phone visible (mirror selfie style), adding unnecessary complexity and potential artifacts",
+      "enforcement": "All selfie templates: 'phone below frame, NOT visible' + 'phone visible in frame' in negative prompt"
+    }
+  ],
+
+  "negative_prompt_library": {
+    "optical_fakes": ["background blur", "bokeh", "bokeh balls", "shallow depth of field", "portrait mode", "gaussian blur on background", "DSLR quality"],
+    "lighting_fakes": ["studio lighting", "ring light", "ring light catch lights", "softbox", "beauty dish", "three-point lighting"],
+    "skin_fakes": ["perfect skin", "porcelain skin", "airbrushed", "smooth skin filter", "beauty mode", "facetune", "pore removal"],
+    "composition_fakes": ["perfectly centered", "symmetrical face", "model pose", "stock photo", "editorial"],
+    "product_fakes": ["product perfectly facing camera", "product display pose", "product floating", "product separately lit"],
+    "phone_fakes": ["phone visible in frame", "mirror selfie"],
+    "expression_fakes": ["exaggerated surprise", "theatrical expression", "wide open mouth", "bug eyes"]
+  }
+}

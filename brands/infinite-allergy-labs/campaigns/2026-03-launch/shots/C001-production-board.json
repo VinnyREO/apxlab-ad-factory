@@ -1,0 +1,225 @@
+{
+  "_format": "PRODUCTION_BOARD",
+  "_version": "1.0",
+
+  "ad": {
+    "id": "C001",
+    "name": "Hidden Food Trigger Reveal",
+    "duration": "15 seconds",
+    "format": "9:16 vertical",
+    "hook_line": "POV: you find out the food you eat EVERY DAY is causing your bloating",
+    "avatar": "Bea",
+    "product": "F.A.S.T. Panel Combo Kit"
+  },
+
+  "storyboard": [
+    "0-3s  → HOOK: Kitchen table, reading results on phone, casual → frozen shock",
+    "3-6s  → BODY: Processing face, looking more toward camera, 'are you serious?'",
+    "6-10s → PROOF: Test kit on counter + she picks it up",
+    "10-13s → RESULT: Relief face, quiet knowing smile",
+    "13-15s → CTA: Product in frame with her, text overlay"
+  ],
+
+  "shots": [
+
+    {
+      "shot_id": "C001-01",
+      "name": "Reading Results — Casual",
+      "what_this_is": "Frame A. She's at kitchen table casually reading phone. Neutral expression",
+      "second": "0-1.5s",
+      "text_overlay": "POV: you find out the food you eat EVERY DAY is causing your bloating",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Bea avatar reference for face identity",
+        "subject": "Same woman from avatar reference. KEY IDENTITY MARKERS: white/grey streak left temple, chin scar, asymmetric brows. Messy bun, no makeup, faded black v-neck tee. MATCH ATTACHED REFERENCE",
+        "expression": "Casual reading face. Neutral-curious. Looking down and to the right (at a phone screen she's holding below frame). Relaxed, not expecting anything surprising. One hand near a coffee mug on table",
+        "scene": "Kitchen table. Morning. She's sitting, looking down at something (phone implied but NOT visible). Coffee mug on table. Simple home kitchen background",
+        "camera": {
+          "device": "iPhone 15 Pro front camera",
+          "DOF": "DEEP — no blur",
+          "framing": "Head, shoulders, upper chest. Selfie distance. 9:16 vertical"
+        },
+        "lighting": "Kitchen morning light, warm. Window light from left",
+        "negative_prompt": ["phone in hand", "phone visible", "holding phone", "background blur", "portrait mode", "studio lighting", "smiling", "posing", "perfect skin"]
+      },
+
+      "output_becomes": "C001-01.jpg → Use as Frame A reference for C001-02"
+    },
+
+    {
+      "shot_id": "C001-02",
+      "name": "Reading Results — Frozen Shock",
+      "what_this_is": "Frame B. Same scene, expression shifts to quiet shock. Something in the results caught her off guard",
+      "second": "1.5-3s",
+
+      "attach": {
+        "reference_1": "C001-01.jpg (Frame A output — ONLY reference)"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Frame A (C001-01). This is the ONLY reference. Generate Frame B from this",
+        "instruction": "Starting from attached Frame A, generate Frame B. ONLY the expression changes. Everything else identical",
+        "expression_change": "Eyes 15% wider. Right brow lifts higher than left (her natural asymmetry). Lips part 3-4mm. Jaw drops 2mm. Frozen for 0.3 seconds of surprise. This is QUIET shock — not theatrical, not hands-over-mouth. Just... processing. The 'wait, what?' micro-moment. Expression at 30% intensity",
+        "what_stays_same": "Same kitchen, same table, same coffee mug, same clothes, same lighting, same framing, same gaze direction",
+        "negative_prompt": ["different room", "different clothes", "hand over mouth", "screaming", "exaggerated shock", "tears", "dramatic"]
+      },
+
+      "output_becomes": "C001-02.jpg → Veo animate C001-01 + C001-02 for hook clip"
+    },
+
+    {
+      "shot_id": "C001-03",
+      "name": "Processing Face — Direct Address",
+      "what_this_is": "She's now looking more toward camera. 'Are you serious?' mixed disbelief and realization",
+      "second": "3-6s",
+      "text_overlay": "the F.A.S.T. panel tests 88 foods across 4 immune pathways",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Bea avatar reference for face identity",
+        "subject": "Same woman. MATCH ATTACHED REFERENCE. Same kitchen setting but slightly different angle — she's now looking more toward camera",
+        "expression": "Processing. Brow slightly furrowed, eyes narrowed (studying/thinking). Mouth closed, pressed together. Head tilts slightly to one side. 'Let me understand this' face. Slight head shake energy. Not angry — just processing information. Expression at 30%",
+        "camera": {
+          "device": "iPhone 15 Pro",
+          "DOF": "DEEP",
+          "framing": "Head and shoulders. Closer than C001-01. She's leaned forward slightly. 9:16 vertical"
+        },
+        "lighting": "Same kitchen morning light",
+        "negative_prompt": ["background blur", "studio lighting", "angry expression", "crying", "smiling"]
+      },
+
+      "output_becomes": "C001-03.jpg"
+    },
+
+    {
+      "shot_id": "C001-04",
+      "name": "Product on Counter — Morning Context",
+      "what_this_is": "The test kit box on kitchen counter next to coffee mug. Lifestyle product shot",
+      "second": "6-8s",
+      "text_overlay": "catches delayed reactions other tests miss",
+
+      "attach": {
+        "reference_1": "products/combo-kit-front.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Combo test kit product image. Must match exactly",
+        "shot_type": "PRODUCT LIFESTYLE. The test kit box sitting on kitchen counter. No face. Morning context",
+        "product_instructions": "White box, navy INFINITE branding, geometric logo — MATCH ATTACHED REFERENCE. Sitting on counter next to coffee mug and phone (phone face-down). Slightly angled, natural placement. Box looks slightly lived-with — it's been sitting on her counter for a few days",
+        "lighting": "Warm kitchen morning light. Product branding readable",
+        "negative_prompt": ["studio shot", "white background", "floating", "wrong branding", "pristine packaging"]
+      },
+
+      "output_becomes": "C001-04.jpg"
+    },
+
+    {
+      "shot_id": "C001-05",
+      "name": "Picking Up the Kit",
+      "what_this_is": "Her hands picking up/holding the test kit. Transition from counter to in-hand",
+      "second": "8-10s",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg",
+        "reference_2": "products/combo-kit-front.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: (1) Bea reference for skin/hand consistency, (2) Product reference",
+        "shot_type": "HANDS + PRODUCT. Her hands holding the test kit box. Face partially visible at top of frame (chin, mouth area). Casual grip",
+        "hands": "Medium brown skin, golden undertones. Black hair tie on right wrist. Short unpolished nails. Fingers wrap around short edge of box",
+        "product_instructions": "Box MATCHES ATTACHED REFERENCE. She's holding it casually — just picked it up from the counter. Not displaying it",
+        "camera": {
+          "DOF": "DEEP",
+          "framing": "Close-up hands + product. Lower face visible at top edge. 9:16 vertical"
+        },
+        "lighting": "Same kitchen light",
+        "negative_prompt": ["wrong product", "wrong branding", "display hold", "manicured nails", "nail polish", "studio lighting"]
+      },
+
+      "output_becomes": "C001-05.jpg"
+    },
+
+    {
+      "shot_id": "C001-06",
+      "name": "Relief Face — Finally Answers",
+      "what_this_is": "Her face showing quiet relief. The knowing half-smile. 'Well, at least now I know'",
+      "second": "10-13s",
+      "text_overlay": "results in 3-5 days + free dietitian consultation",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Bea avatar reference",
+        "subject": "Same woman. MATCH ATTACHED REFERENCE. Kitchen setting",
+        "expression": "Quiet relief. Asymmetric half-smile — right side lifts slightly more. Eyes softer, warmer. Eye crinkle barely visible. Shoulders visibly dropped from tension. A single slow exhale energy. 'Finally, answers' without saying it. Expression at 30% — subtle, not a grin",
+        "camera": {
+          "device": "iPhone 15 Pro front camera",
+          "DOF": "DEEP",
+          "framing": "Head and shoulders. Direct but 2 degrees off camera. Warm. 9:16 vertical"
+        },
+        "lighting": "Warm kitchen light. Slightly more flattering than earlier shots — she's in a better light now (metaphorically and literally)",
+        "negative_prompt": ["big smile", "teeth showing", "laughing", "exaggerated", "studio lighting", "perfect skin"]
+      },
+
+      "output_becomes": "C001-06.jpg"
+    },
+
+    {
+      "shot_id": "C001-07",
+      "name": "CTA — Product + Her",
+      "what_this_is": "She's in frame with the product. Taps or gestures at it. Text does the selling",
+      "second": "13-15s",
+      "text_overlay": "Link in bio → covered by most insurance plans",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg",
+        "reference_2": "products/combo-kit-front.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: (1) Bea reference, (2) Product reference",
+        "subject": "Same woman holding test kit box at chest level. Looking at camera with warm, confident, 'you should try this' energy. NOT selling — recommending",
+        "product_instructions": "Box MATCHES ATTACHED REFERENCE. Held at mid-chest, branding facing camera. Natural hold, not product placement",
+        "expression": "Warm confidence. Gentle half-smile. Direct gaze (still 2 degrees off). 'This changed things for me' energy without words",
+        "camera": {
+          "DOF": "DEEP",
+          "framing": "Head, shoulders, and product visible at chest level. 9:16 vertical"
+        },
+        "lighting": "Warm kitchen light",
+        "negative_prompt": ["studio shot", "model pose", "hard sell expression", "big smile", "wrong product"]
+      },
+
+      "output_becomes": "C001-07.jpg → All shots complete"
+    }
+  ],
+
+  "production_summary": {
+    "total_shots": 7,
+    "generations_needed": [
+      "C001-01: Avatar ref → kitchen reading casual",
+      "C001-02: C001-01 output → expression shift (Frame B shock)",
+      "C001-03: Avatar ref → processing/thinking face",
+      "C001-04: Product ref → product on counter lifestyle",
+      "C001-05: Avatar ref + Product ref → hands holding kit",
+      "C001-06: Avatar ref → relief face",
+      "C001-07: Avatar ref + Product ref → her + product CTA"
+    ],
+    "reference_images_needed": {
+      "bea_reference": "avatars/bea/reference.jpg",
+      "product_reference": "products/combo-kit-front.jpg"
+    },
+    "veo_animations": [
+      "C001-01 + C001-02 → 2.5s clip (casual reading → frozen shock)"
+    ]
+  }
+}

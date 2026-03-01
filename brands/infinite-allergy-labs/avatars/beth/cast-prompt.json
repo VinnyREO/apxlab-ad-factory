@@ -1,0 +1,60 @@
+{
+  "_shot": "AVATAR_CAST",
+  "_avatar": "Bloated Beth",
+  "_instructions": "Paste this entire JSON into Nano Banana 2. No reference images needed. Generate 3-4 variations and pick the best",
+
+  "reference_images": "NONE — generating new avatar",
+
+  "subject": {
+    "demographics": "American woman, 31, light olive skin, ambiguously Mediterranean/Latina-American heritage. Born and raised in the US — think Southern California or Texas",
+    "signature_details": {
+      "primary": "Prominent beauty mark — 4mm diameter, raised, dark brown — centered on right cheek, halfway between nose and ear. Impossible to miss in any frame. This is a MOLE, not a freckle — raised, dark, defined edges",
+      "secondary": "Gap between front two upper teeth — 2mm diastema. Visible when mouth opens even slightly. A distinctive feature, not something she'd fix",
+      "tertiary": "Asymmetric ear piercings: left ear has 3 piercings (lobe, mid-helix, upper helix). Right ear has ONLY lobe piercing. Always this exact configuration"
+    },
+    "hair": "Dark brown, thick, naturally curly (3A curl pattern) but currently air-dried and undefined — frizzy, no product, no definition. 'Gave up on styling today' texture. Shoulder-length, slightly shorter on right side from uneven growth. No color treatment, natural dark brown with a few lighter strands from sun",
+    "skin_details": "Light olive complexion with visible tiredness. Faint dark circles under eyes (olive-brown, not dramatic). Slight facial puffiness — water retention look, especially around jawline and under-eyes. This matches the 'bloating' angle. A few faint acne scars on both cheeks (shallow, textured, old). Pores visible on nose. The prominent beauty mark on right cheek is the dominant feature. Lips full, naturally mauve-brown, lower lip slightly chapped with dry skin at center",
+    "apparel": "Washed-out sage green oversized hoodie, hood down, drawstrings are different lengths (one shorter from being chewed/pulled). Sleeves pushed up to elbows revealing forearms. The green has faded unevenly — darker under arms, lighter across chest from sun/washing",
+    "accessories": [
+      "Thin gold chain bracelet on right wrist — never takes it off, slightly tarnished, clasp has migrated to the side",
+      "Left ear: small gold hoop in lobe, tiny gold stud in mid-helix, tiny gold stud in upper helix",
+      "Right ear: small gold hoop in lobe ONLY (no other piercings)"
+    ]
+  },
+
+  "expression": {
+    "type": "NEUTRAL for avatar lock. Natural resting face. Not reacting, not posing, not smiling. The face of someone who woke up puffy again and is just... tired of it",
+    "micro_expression": "The facial puffiness gives a slightly heavy quality to her features. Mouth relaxed, full lips slightly parted (1-2mm). Eyes open but not alert — low-energy neutral. Overall impression: 'another morning feeling swollen'",
+    "gaze": "Looking 2-3 degrees right of lens. Calm but slightly resigned gaze"
+  },
+
+  "camera": {
+    "device": "iPhone 15 Pro front camera",
+    "DOF": "DEEP. Everything in sharp focus. NO blur. NO portrait mode",
+    "framing": "Head and shoulders ONLY. Centered. Clean and simple. NO hands in frame. NO phone visible. NO props. Just face, neck, and upper shoulders against a simple background",
+    "distance": "Arm's length selfie distance"
+  },
+
+  "lighting": {
+    "source": "Soft natural window light from the left. Neutral-warm morning light. The puffiness in her face should be visible — the light should reveal it, not hide it"
+  },
+
+  "environment": {
+    "setting": "Simple neutral background. Plain wall or minimal interior. AVATAR LOCK IMAGE — no elaborate scene",
+    "note": "AVATAR LOCK IMAGE. No context. No story. Just the person"
+  },
+
+  "negative_prompt": [
+    "phone in frame", "holding phone", "hand in frame", "hands visible",
+    "mirror selfie", "holding anything", "props in frame",
+    "background blur", "bokeh", "shallow depth of field", "portrait mode",
+    "studio lighting", "ring light", "softbox",
+    "perfect skin", "airbrushed", "smooth skin", "beauty mode", "facetune",
+    "contoured jawline", "sharp jawline", "no puffiness",
+    "model pose", "stock photo", "editorial", "magazine",
+    "makeup", "foundation", "contour", "lipstick", "mascara",
+    "defined curls", "styled curls", "product in hair", "salon hair",
+    "smiling", "laughing", "exaggerated expression", "posing",
+    "missing beauty mark", "no mole on cheek", "smooth cheeks"
+  ]
+}

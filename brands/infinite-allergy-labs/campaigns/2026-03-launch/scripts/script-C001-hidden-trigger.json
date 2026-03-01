@@ -1,0 +1,125 @@
+{
+  "script": {
+    "concept_id": "C001",
+    "concept_name": "Hidden Food Trigger Reveal",
+    "hook_type": "shocked_discovery",
+    "target_persona": "Mystery Symptom Maria",
+    "star_product": "Food Allergy & Sensitivity Test (F.A.S.T. Panel)",
+    "platform": "Meta Reels / Instagram Reels / TikTok",
+    "duration": "15 seconds",
+    "format": "9:16 vertical",
+
+    "hook_line": "POV: you find out the food you eat EVERY DAY is causing your bloating",
+    "emotional_arc": "Curiosity → quiet shock → processing → relief/empowerment",
+
+    "beats": {
+      "second_0_3": {
+        "name": "HOOK — The Result Reveal",
+        "action": "Woman sitting at kitchen table, phone in one hand. She's looking at her F.A.S.T. results on her phone screen (we don't see the screen). Her expression shifts from casual reading to frozen — quiet shock. Eyes slightly wider, lips part 3-4mm. The 'wait... what?' moment",
+        "text_overlay": "POV: you find out the food you eat EVERY DAY is causing your bloating",
+        "audio": "Kitchen ambient. Quiet. Maybe a mug being set down",
+        "frame_type": "FRAME_A → FRAME_B (interpolated via Veo)",
+        "frame_a_expression": "Casual reading face. Neutral-curious. Looking at phone screen (off camera, down-right)",
+        "frame_b_expression": "Quiet shock. Eyes 15% wider, brow lifts (left more than right per asymmetry), lips part 3-4mm, jaw drops 2mm. Frozen. Second 0.3 of surprise. NOT theatrical",
+        "character_notes": "No product in hand yet. Phone in one hand. Free hand was resting on table, now frozen mid-reach toward coffee mug"
+      },
+
+      "second_3_6": {
+        "name": "BODY — The Processing",
+        "action": "She looks up from phone to camera. Direct address energy but still slightly off-axis. Processing face — not shocked anymore, now it's 'are you serious?' Mixed disbelief and slow realization. She might do a small head shake",
+        "text_overlay": "the F.A.S.T. panel tests 88 foods across 4 immune pathways",
+        "audio": "Quiet. Her exhale. Maybe chair creak",
+        "frame_type": "TESTIMONIAL talking-head style",
+        "expression": "Processing. Brow slightly furrowed, eyes narrowed (studying/thinking), mouth closed now. Head tilts slightly. 'Let me understand this' face"
+      },
+
+      "second_6_10": {
+        "name": "PROOF — The Product",
+        "action": "Cut to: the test kit box on kitchen counter next to her coffee mug and phone. Natural context — this is her morning, the results just came in. The white box with navy INFINITE branding is clearly visible. Then she picks it up, holding it casually",
+        "text_overlay": "catches delayed reactions other tests miss",
+        "audio": "Box pickup sound. Subtle",
+        "frame_type": "PRODUCT_HERO → PRODUCT_IN_HAND",
+        "product_notes": "Box should look slightly lived-with. Maybe the corner is slightly worn from being on the counter for days. NOT pristine unboxing condition"
+      },
+
+      "second_10_13": {
+        "name": "RESULT — The Relief",
+        "action": "Back to her face. Now she has a subtle, knowing smile. Not a big grin — a 'well at least now I know' expression. Slight eye crinkle. Relief energy. She's looking at camera more directly now (still 2 degrees off but more engaged)",
+        "text_overlay": "results in 3-5 days + free dietitian consultation",
+        "audio": "Slight sigh of relief",
+        "frame_type": "TESTIMONIAL",
+        "expression": "Quiet relief. Asymmetric half-smile (right side lifts more). Eyes softer, warmer. Shoulders dropped from tension. 'Finally, answers' energy"
+      },
+
+      "second_13_15": {
+        "name": "CTA",
+        "action": "Product box back in frame, she taps it with her finger or gestures toward it. Text overlay does the heavy lifting here",
+        "text_overlay": "Link in bio → covered by most insurance plans",
+        "audio": "Subtle UI sound or nothing",
+        "frame_type": "PRODUCT_WITH_CTA",
+        "notes": "Keep her in frame with product. Don't cut to a separate branded end card — that breaks the UGC feel"
+      }
+    },
+
+    "shot_list": {
+      "shots_needed": [
+        {
+          "shot_id": "C001-A",
+          "type": "FRAME_A",
+          "description": "Woman at kitchen table, reading phone, casual/neutral expression",
+          "template": "scene-expression.json",
+          "references_needed": ["character_ref"],
+          "notes": "No product in frame. Phone implied (looking down-right). Free hand near coffee mug"
+        },
+        {
+          "shot_id": "C001-B",
+          "type": "FRAME_B",
+          "description": "Same scene, expression shifted to quiet shock",
+          "template": "frame-b.json",
+          "references_needed": ["C001-A output"],
+          "notes": "Only expression changes. Everything else identical"
+        },
+        {
+          "shot_id": "C001-C",
+          "type": "TESTIMONIAL",
+          "description": "Processing/thinking face, looking more toward camera",
+          "template": "scene-expression.json",
+          "references_needed": ["character_ref"],
+          "notes": "Slight reframe — she's now addressing camera. Still kitchen. Different expression"
+        },
+        {
+          "shot_id": "C001-D",
+          "type": "PRODUCT_HERO",
+          "description": "Test kit box on counter with coffee mug, phone, morning context",
+          "template": "product-integration-frame-a.json (adapted for tabletop)",
+          "references_needed": ["combo-kit-front.jpg"],
+          "notes": "Product on surface, not in hand. Lifestyle context. NOT studio packshot"
+        },
+        {
+          "shot_id": "C001-E",
+          "type": "PRODUCT_IN_HAND",
+          "description": "Her picking up / holding the test kit box",
+          "template": "product-integration-frame-a.json",
+          "references_needed": ["character_ref", "combo-kit-front.jpg"],
+          "notes": "Casual grip. Not display hold. Fingers wrap around short edge"
+        },
+        {
+          "shot_id": "C001-F",
+          "type": "RELIEF_FACE",
+          "description": "Quiet smile, relief expression",
+          "template": "scene-expression.json",
+          "references_needed": ["character_ref"],
+          "notes": "Warmest expression. Half-smile. Eyes softer. 'Finally' energy"
+        }
+      ],
+      "veo_animations": [
+        {
+          "clip_id": "C001-V1",
+          "input": ["C001-A", "C001-B"],
+          "duration": "2.5s",
+          "description": "The hook moment: casual reading → frozen shock"
+        }
+      ]
+    }
+  }
+}

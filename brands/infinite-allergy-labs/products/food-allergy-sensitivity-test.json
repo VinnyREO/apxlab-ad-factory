@@ -1,0 +1,107 @@
+{
+  "product": {
+    "name": "Food Allergy & Sensitivity Test (F.A.S.T. Panel)",
+    "type": "At-home allergy testing kit",
+    "sku": "FOOD-88",
+
+    "pricing": {
+      "self_pay": "$449.00",
+      "with_insurance": "As low as $25 + $90 physician oversight fee",
+      "price_positioning": "Premium but insurance-eligible. Lead with insurance price in ads",
+      "note": "Price from infinitewellnessusa.com DTC store. LabFinder lists $648 (different channel)"
+    },
+
+    "packaging": {
+      "type": "Rigid rectangular box, landscape orientation",
+      "material": "Matte white cardboard, rigid (not flexible like LYFEfuel pouch)",
+      "dimensions": {
+        "width_cm": 22,
+        "width_inches": 8.5,
+        "height_cm": 14,
+        "height_inches": 5.5,
+        "depth_cm": 5,
+        "depth_inches": 2,
+        "notes": "Approximate based on standard medical test kit sizing"
+      },
+      "colors": {
+        "box": "Matte white",
+        "branding": "Deep navy blue (#1B2A4A)",
+        "text": "Deep navy blue"
+      },
+      "label_elements": [
+        "INFINITE wordmark at top center (navy, spaced letters, stylized M)",
+        "Large geometric logo center (infinity/M shaped abstract mark, navy)",
+        "FOOD ALLERGY & SENSITIVITY TEST at bottom center (navy, all caps, smaller than logo)"
+      ],
+      "visual_description": "Extremely clean and minimal. White box with ONLY navy branding. No photos, no busy graphics, no color gradients. Just logo + product name. Reads as medical/professional, not consumer/flashy",
+      "scale_in_hand": "Box width is roughly 1.5x a hand width. When held in one hand, fingers wrap around the short edge. When held in two hands like opening a gift, it covers both palms. Slightly larger than a hardcover book",
+      "weight_feel": "Light rigid box. Does not sag or flex. Feels like a premium packaging box"
+    },
+
+    "reference_images": {
+      "kit_box_front": "food-allergy-kit-front.jpg",
+      "notes": "White rectangular box, landscape orientation. Navy INFINITE wordmark at top, large navy geometric logo (infinity/M shape) center, 'FOOD ALLERGY & SENSITIVITY TEST' in navy at bottom. Clean, minimal, medical-professional. Studio shot on grey background with soft shadow"
+    },
+
+    "what_it_tests": {
+      "antigens": "88 common food antigens",
+      "immune_pathways": {
+        "IgE": "Immediate allergic reactions (minutes to hours). Histamine, hives, breathing issues, anaphylaxis",
+        "IgG": "Delayed food sensitivities (3-72 hours). Hard to identify without testing",
+        "IgG4": "Tolerance/blocking antibodies",
+        "C3b_d": "Complement system. Amplifies IgG reactions 1,000 to 10,000x. Tests that only measure IgG miss these"
+      },
+      "key_claim": "Tests 4 immune pathways. Most competitors only test 1-2. This catches reactions other tests miss"
+    },
+
+    "collection_methods": {
+      "option_1": "Dried Blood Spot (DBS) — simple at-home finger prick. Easy, safe, mail back",
+      "option_2": "Serum collection — requires phlebotomist (blood draw at lab/clinic)"
+    },
+
+    "results": {
+      "turnaround": "3-5 business days after specimen received",
+      "format": "Color-coded report, food groupings, single-page overview, detailed allergen list, foods-to-avoid list",
+      "delivery": "Online through secure portal",
+      "followup": "Free consultation with registered dietitian included"
+    },
+
+    "symptoms_it_addresses": [
+      "Bloating and digestive issues",
+      "Fatigue and low energy",
+      "Skin flare-ups (eczema, hives, rashes)",
+      "Headaches and migraines",
+      "Mood swings and brain fog",
+      "Weight challenges and inflammation",
+      "Chronic congestion and sinus issues",
+      "Joint pain"
+    ],
+
+    "ad_angles": {
+      "strongest_hooks": [
+        "The 'finally got answers' relief angle (years of mystery symptoms)",
+        "The hidden food trigger reveal (foods you eat daily causing issues)",
+        "The '4 pathways' superiority (most tests miss delayed reactions)",
+        "The simplicity angle (finger prick at home, results in days)",
+        "The insurance angle ($25 with insurance vs $648 self-pay)",
+        "The symptom connection (your bloating/fatigue/skin ISN'T normal)"
+      ],
+      "proof_points": [
+        "CLIA certified, COLA accredited (real lab credentials)",
+        "4 immune pathways (most comprehensive on market)",
+        "88 antigens tested",
+        "3-5 day turnaround (fastest in industry)",
+        "1000+ providers in network",
+        "Free dietitian consultation included",
+        "Color-coded easy-to-read results"
+      ],
+      "emotional_triggers": [
+        "Frustration of not knowing what's causing symptoms",
+        "Relief of finally having answers",
+        "Empowerment of taking control of your health",
+        "Surprise at discovering hidden food triggers",
+        "Validation that symptoms were real (not 'in your head')"
+      ]
+    }
+  }
+}

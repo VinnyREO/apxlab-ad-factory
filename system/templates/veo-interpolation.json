@@ -1,0 +1,17 @@
+{
+  "_template": "VEO_INTERPOLATION",
+  "_version": "5.0",
+  "_description": "Prompt for Veo 3.1 or Kling to interpolate between Frame A and Frame B. Produces the actual video clip.",
+  "_usage": "Feed Frame A image + Frame B image + this prompt to Veo/Kling.",
+
+  "interpolation_prompt": "Interpolate between Frame A (start) and Frame B (end) to create a smooth [FILL: 2-3] second video clip.\n\nMOTION RULES:\n- Camera is STATIC (locked selfie position, zero camera movement)\n- All motion comes from the SUBJECT only\n- Subtle natural motion: micro-expressions, small head movements, breathing, hair settling\n- No sudden jumps or unnatural acceleration\n- Consistent lighting throughout (no flicker)\n- Consistent deep DOF (sharp background throughout)\n\nWHAT MOVES:\n- Facial muscles transitioning from A expression to B expression\n- Head position shifting from A to B\n- Eyes: pupil position, lid openness, blink if natural\n- Mouth: lip position, jaw movement\n- Breathing: subtle chest/shoulder rise and fall\n- Hair: strands settling from head movement\n- [FILL: specific motion per script, e.g. 'Body leaning forward toward camera']\n\nWHAT DOESN'T MOVE:\n- Camera position and angle\n- Background elements\n- Phone-holding hand grip\n- Clothing\n- Lighting direction and color\n- Product in hand (same grip throughout)\n\nAUDIO:\n[FILL: environment-specific audio from V3 cues]\n\nOUTPUT: [FILL: duration] seconds, input resolution, 24-30fps",
+
+  "environment_audio_presets": {
+    "kitchen_morning": "Quiet kitchen ambience: fridge hum, distant traffic through window, soft fabric rustle from movement. No music. No voiceover for hook clip",
+    "bathroom": "Bathroom echo on any sounds. Fan hum. Slight tile reverb. Water drip possible",
+    "bedroom": "Quiet. Soft fabric sounds. Maybe distant TV or music from another room. Muffled",
+    "living_room": "Living room ambient. TV low in background possible. More spacious reverb than bathroom",
+    "car": "Car cabin: engine idle or low road noise. Muffled exterior. Climate control fan. Enclosed acoustic",
+    "outdoor": "Environmental audio: wind, birds, traffic depending on setting. Open acoustic. No reverb"
+  }
+}

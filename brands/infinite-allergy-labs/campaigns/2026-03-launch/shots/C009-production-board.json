@@ -1,0 +1,234 @@
+{
+  "_format": "PRODUCTION_BOARD",
+  "_version": "1.0",
+
+  "ad": {
+    "id": "C009",
+    "name": "Doctor Said Everything's Normal",
+    "duration": "15 seconds",
+    "format": "9:16 vertical",
+    "hook_line": "my doctor said 'everything looks normal' for the third time",
+    "avatar": "Bea",
+    "product": "F.A.S.T. Panel Combo Kit"
+  },
+
+  "storyboard": [
+    "0-3s  → HOOK: Couch, defeated/exhausted, frustration → determination shift",
+    "3-7s  → BODY: Hands opening test kit, unboxing, showing simplicity",
+    "7-11s → PROOF: Reading results on phone, vindication/surprise",
+    "11-13s → RESULT: Better version of herself, kitchen, energized",
+    "13-15s → CTA: Holding test kit, confident recommendation"
+  ],
+
+  "shots": [
+
+    {
+      "shot_id": "C009-01",
+      "name": "Couch Frustration — Defeated",
+      "what_this_is": "Frame A. She's on the couch, exhausted and frustrated. Doctor just dismissed her again",
+      "second": "0-1.5s",
+      "text_overlay": "my doctor said 'everything looks normal' for the third time",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Bea avatar reference for face identity",
+        "subject": "Same woman from avatar reference. KEY IDENTITY MARKERS: white/grey streak left temple, chin scar, asymmetric brows. Hair in messy bun. No makeup. MATCH ATTACHED REFERENCE",
+        "apparel": "Oversized hoodie or cardigan, something she grabbed to wrap herself in on the couch. Comfort clothes. Maybe a blanket edge visible near her",
+        "expression": "Tired frustration. NOT crying, NOT dramatic. Just TIRED of not having answers. Under-eye circles prominent. Lips pressed together (holding back emotion). Brow slightly furrowed. Looking at camera with exhausted directness. 'You know what I mean' energy",
+        "scene": "Living room couch. Evening-ish light. She's sitting/leaning against cushions. Blanket or pillow nearby. Cozy but defeated energy",
+        "camera": {
+          "device": "iPhone 15 Pro front camera",
+          "DOF": "DEEP — no blur",
+          "framing": "Head and shoulders. Selfie distance from couch. Slightly below eye level (phone propped or held low). 9:16 vertical"
+        },
+        "lighting": "Warm but dim living room light. Table lamp or TV glow. Evening 'I've given up for today' light. Shadows under cheekbones",
+        "negative_prompt": ["background blur", "portrait mode", "studio lighting", "crying", "tears", "dramatic", "smiling", "perfect skin", "makeup"]
+      },
+
+      "output_becomes": "C009-01.jpg → Use as Frame A reference for C009-02"
+    },
+
+    {
+      "shot_id": "C009-02",
+      "name": "Couch Determination — 'Fine, I'll Do It Myself'",
+      "what_this_is": "Frame B. Same couch scene, expression shifts from defeated to determined",
+      "second": "1.5-3s",
+
+      "attach": {
+        "reference_1": "C009-01.jpg (Frame A output — ONLY reference)"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Frame A (C009-01). ONLY reference. Generate Frame B from this",
+        "instruction": "Starting from attached Frame A, ONLY the expression changes. Everything else stays identical",
+        "expression_change": "Slight eye roll transitioning to determination. Jaw sets (muscles tighten along jawline). Eyes narrow slightly — not angry, decisive. A subtle shift from 'defeated' to 'fine, I'll figure it out myself'. Chin lifts 2-3mm. The moment she decides to take testing into her own hands. Expression at 30%",
+        "what_stays_same": "Same couch, same clothes, same lighting, same blanket, same framing. ONLY expression changes",
+        "negative_prompt": ["different room", "standing up", "different clothes", "angry", "yelling", "dramatic movement"]
+      },
+
+      "output_becomes": "C009-02.jpg → Veo animate C009-01 + C009-02"
+    },
+
+    {
+      "shot_id": "C009-03",
+      "name": "Unboxing — Hands Opening Kit",
+      "what_this_is": "POV overhead shot of her hands opening the test kit box. Demystifies the process",
+      "second": "3-5s",
+      "text_overlay": "so I tested myself. 88 foods. 4 immune pathways. at home.",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg (for hand/skin tone)",
+        "reference_2": "products/combo-kit-front.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: (1) Bea reference for skin tone consistency, (2) Product reference for box accuracy",
+        "shot_type": "POV OVERHEAD — looking down at a table where her hands are opening the test kit box. Her face is NOT visible. This is a hands-only shot",
+        "hands": "Medium brown skin, warm golden undertones matching avatar reference. Black hair tie on right wrist. Short unpolished nails. Both hands in frame — one holding box lid open, one reaching inside",
+        "product_instructions": "The test kit box MATCHES ATTACHED REFERENCE — white box, navy INFINITE branding. Box is OPEN, lid flipped back. Inside should look organized and simple — clean compartments, instructional insert visible. The visual message is: this is easy, not intimidating",
+        "surface": "Kitchen table or desk. Light wood or white surface. Clean, organized",
+        "camera": {
+          "angle": "Directly overhead, looking straight down at the table",
+          "DOF": "DEEP — hands, box, and surface all sharp",
+          "framing": "Her hands and the open box fill the frame. 9:16 vertical"
+        },
+        "lighting": "Bright, clear overhead kitchen/desk light. Everything well-lit and readable",
+        "negative_prompt": ["face visible", "from the side", "wrong product", "wrong branding", "messy table", "scary medical equipment", "needles visible", "blood"]
+      },
+
+      "output_becomes": "C009-03.jpg"
+    },
+
+    {
+      "shot_id": "C009-04",
+      "name": "Finger Prick Close-Up",
+      "what_this_is": "Quick shot showing how simple the collection is. Just a finger prick device — tiny, not scary",
+      "second": "5-7s",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg (for hand/skin tone)"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Bea reference for skin tone",
+        "shot_type": "EXTREME CLOSE-UP of her hand holding a small finger prick lancet device. Clean, medical, not scary. The device should look like a small plastic pen-like object — standard disposable lancet",
+        "hands": "Medium brown skin matching reference. One hand holds the lancet near her other hand's fingertip. NOT actually pricking — just showing the device against her finger. About to do it, not during or after",
+        "visual_message": "THIS IS EASY. The device is tiny. It's just a small prick. Demystify the process",
+        "camera": {
+          "DOF": "DEEP",
+          "framing": "Extreme close-up of fingers and lancet device. 9:16 vertical"
+        },
+        "lighting": "Bright, clear. Clean medical feel but in her home, not a lab",
+        "negative_prompt": ["blood visible", "needle visible", "scary", "pain expression", "medical office", "doctor", "clinical setting"]
+      },
+
+      "output_becomes": "C009-04.jpg"
+    },
+
+    {
+      "shot_id": "C009-05",
+      "name": "Results Vindication — 'I KNEW IT'",
+      "what_this_is": "She's reading results on her phone. Mix of vindication and surprise. 12 sensitivities found",
+      "second": "7-11s",
+      "text_overlay": "turns out I had 12 food sensitivities my bloodwork never tested for",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Bea avatar reference",
+        "subject": "Same woman. MATCH ATTACHED REFERENCE. Now in kitchen or at desk, different setting from couch scene. Better lit",
+        "expression": "Vindication + surprise. Brows raised (right higher than left per her asymmetry). Eyes wider. Slow nod — the 'I KNEW something was wrong' moment. Mouth forms brief 'o' then closes into a knowing press. Head tilts back slightly. Not anger at doctor — relief at being validated. Expression at 30%",
+        "gaze": "Looking down-right (at phone/results) — not at camera",
+        "camera": {
+          "device": "iPhone 15 Pro front camera",
+          "DOF": "DEEP",
+          "framing": "Head and shoulders. 9:16 vertical"
+        },
+        "lighting": "Brighter than couch scene. Daytime. Progress in lighting matches progress in story",
+        "negative_prompt": ["phone visible", "holding phone", "background blur", "angry", "crying", "dramatic"]
+      },
+
+      "output_becomes": "C009-05.jpg"
+    },
+
+    {
+      "shot_id": "C009-06",
+      "name": "Better Version — Kitchen Morning",
+      "what_this_is": "The subtle 'after'. Same person but visibly more at ease. Brighter eyes, less tension",
+      "second": "11-13s",
+      "text_overlay": "3 weeks later: no more bloating, sleeping through the night",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Bea avatar reference",
+        "subject": "Same woman. MATCH ATTACHED REFERENCE. Kitchen, morning, making food or holding a mug. She looks BETTER — not dramatically, just subtly more alive",
+        "expression": "Genuine energy. Not forced happiness — just the absence of the weight she was carrying. Eyes brighter, under-eye circles slightly less prominent. Shoulders relaxed. Natural half-smile. She's looking at camera with the energy of someone who figured something out",
+        "improvement_notes": "This is NOT a dramatic transformation. Same person, same clothes style, same messy bun. The difference is: she looks RESTED. Less puffy. More present. The change should be believable — 3 weeks of avoiding trigger foods, not a makeover",
+        "camera": {
+          "DOF": "DEEP",
+          "framing": "Head and shoulders. Kitchen background. Warm morning light. 9:16 vertical"
+        },
+        "lighting": "Warm, flattering morning light. The best lighting in the whole ad — she's in a better place now",
+        "negative_prompt": ["dramatic transformation", "makeup added", "different person", "magazine quality", "perfect skin", "glowing", "studio lighting"]
+      },
+
+      "output_becomes": "C009-06.jpg"
+    },
+
+    {
+      "shot_id": "C009-07",
+      "name": "CTA — Confident Recommendation",
+      "what_this_is": "Holding test kit, warm confident expression. 'You should do this too' without saying it",
+      "second": "13-15s",
+      "text_overlay": "covered by most insurance · results in 3-5 days · link in bio",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg",
+        "reference_2": "products/combo-kit-front.jpg"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: (1) Bea reference, (2) Product reference",
+        "subject": "Same woman holding test kit at chest level. MATCH BOTH REFERENCES",
+        "expression": "Warm confidence. Not selling — sharing. Genuine half-smile, direct gaze (2 degrees off camera). 'This worked for me' energy",
+        "product_instructions": "Box MATCHES ATTACHED PRODUCT REFERENCE. Held naturally at mid-chest. Branding visible",
+        "camera": {
+          "DOF": "DEEP",
+          "framing": "Head, shoulders, product at chest. Kitchen background. 9:16 vertical"
+        },
+        "lighting": "Warm kitchen light. Bright, positive, but natural",
+        "negative_prompt": ["studio shot", "model pose", "big grin", "wrong product", "display hold"]
+      },
+
+      "output_becomes": "C009-07.jpg → All shots complete"
+    }
+  ],
+
+  "production_summary": {
+    "total_shots": 7,
+    "generations_needed": [
+      "C009-01: Avatar ref → couch frustration",
+      "C009-02: C009-01 output → determination shift (Frame B)",
+      "C009-03: Avatar ref + Product ref → hands unboxing overhead",
+      "C009-04: Avatar ref → finger prick close-up",
+      "C009-05: Avatar ref → vindication reading results",
+      "C009-06: Avatar ref → subtle 'after' kitchen",
+      "C009-07: Avatar ref + Product ref → CTA with product"
+    ],
+    "reference_images_needed": {
+      "bea_reference": "avatars/bea/reference.jpg",
+      "product_reference": "products/combo-kit-front.jpg"
+    },
+    "veo_animations": [
+      "C009-01 + C009-02 → 2.5s clip (defeated → determined)"
+    ]
+  }
+}

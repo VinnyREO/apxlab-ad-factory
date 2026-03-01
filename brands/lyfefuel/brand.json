@@ -1,0 +1,31 @@
+{
+  "brand": {
+    "name": "LYFEfuel",
+    "tagline": "Fuel Your Best Life",
+    "website": "https://lyfefuel.com",
+    "category": "Health & Wellness / Supplements",
+    "voice": {
+      "tone": "Approachable, science-backed but not clinical. Like a knowledgeable friend who actually reads the labels. Not preachy, not bro-science. Conversational authority",
+      "avoid": ["Miracle claims", "Before/after extremes", "Medical advice", "Shaming language", "Overly clinical jargon"],
+      "embrace": ["Real results over time", "Ingredient transparency", "Honest skepticism turned belief", "Daily routine integration", "Simplicity"]
+    },
+    "visual_identity": {
+      "primary_colors": ["#4ECDC4 (turquoise)", "#5D4037 (chocolate brown)"],
+      "secondary_colors": ["#FFFFFF (white text)", "#F5F5DC (cream/beige)"],
+      "logo": "LYFEfuel wordmark in white on turquoise background. Clean sans-serif font. Lowercase 'fuel' attached to uppercase 'LYFE'",
+      "icon": "Brown tree/plant icon with leaves and roots, representing whole food ingredients"
+    },
+    "key_differentiators": [
+      "25 whole food ingredients in one shake",
+      "Plant-based protein (18g)",
+      "Only 2g all-natural sugar",
+      "Includes probiotics, digestive enzymes, super greens",
+      "Vitamins D3, B12, K2, Mg, Co-Q10",
+      "Non-GMO, No Soy, No Dairy, Vegan, Nothing Artificial"
+    ],
+    "competitive_landscape": {
+      "competitors": ["AG1/Athletic Greens", "Ka'Chava", "Huel", "Orgain"],
+      "positioning": "More complete than greens powders (AG1), tastier and cleaner than meal replacements (Huel), more transparent than premium shakes (Ka'Chava)"
+    }
+  }
+}

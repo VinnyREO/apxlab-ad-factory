@@ -1,0 +1,76 @@
+{
+  "_template": "SCENE_EXPRESSION",
+  "_version": "5.0",
+  "_description": "Put locked character into a scene with expression. Stage 2. No product. Tests character lock + expression control.",
+  "_usage": "Attach locked character image as reference. Fill variables. Generate. Verify character held before moving to product integration.",
+
+  "reference_images": {
+    "image_1": {
+      "role": "CHARACTER_REFERENCE",
+      "instruction": "[FILL: 'Maintain EXACTLY:' + paste character's prompt_block.character_reference_instruction from character.json]"
+    }
+  },
+
+  "subject": {
+    "LOCKED_FROM_REFERENCE": "[FILL: list ALL signature details that MUST appear]",
+    "hair": "[FILL: 'Same as reference' + any minor allowed changes like strand movement]",
+    "apparel": "[FILL: same as reference OR new outfit if script requires]",
+    "accessories": "[FILL: same consistency markers from character.json]"
+  },
+
+  "mood": {
+    "emotion": "[FILL: describe at 30% intensity. Understate. Specify the SECOND of the emotion (0.3 = subtle, 2.0 = performative)]",
+    "facial_expression": "[FILL: specific muscle movements. Which eyebrow, mm of mouth opening, which side moves. Include character's asymmetry pattern]",
+    "energy": "[FILL: frozen / thawing / active / settling / resting]"
+  },
+
+  "pose": {
+    "body_position": "[FILL: natural, not posed. Per script context]",
+    "head_and_gaze": "Looking slightly off-camera (2-3 degrees right of lens, at phone screen). Chin slightly down. Head tilt: [FILL: degrees and direction]",
+    "framing": "Off-center. Imperfect. Horizon tilted 2 degrees. Phone below frame, NOT visible. Chest-up selfie distance"
+  },
+
+  "hands_and_fingers": {
+    "phone_hand": {
+      "action": "Below frame. Phone NOT visible. Only finger edge at bottom of image",
+      "nail_details": "[FILL: from character.json]",
+      "CRITICAL": "5 fingers"
+    },
+    "free_hand": {
+      "action": "[FILL: gesture matching emotion. Chest-touch = surprise, chin-rest = skepticism, hair-touch = casual, frozen-reach = interrupted]",
+      "visibility": "[FILL: how much of hand visible]",
+      "nail_details": "[FILL: same as phone hand]",
+      "CRITICAL": "5 fingers"
+    }
+  },
+
+  "environment": {
+    "setting": "[FILL: per script. ALL IN SHARP FOCUS]",
+    "background_elements": "[FILL: specific lived-in details. Real objects, real mess]",
+    "NO_PRODUCTS": "Zero products in frame. This is a scene/expression test only"
+  },
+
+  "camera": {
+    "device": "iPhone 15 Pro front camera, 23mm equivalent",
+    "DOF": "DEEP. Face AND background sharp. NO blur. NO portrait mode",
+    "processing": "Apple over-sharpened skin, warm-neutral color science",
+    "distortion": "23mm wide-angle selfie distortion: nose 5-10% larger, face slightly wider"
+  },
+
+  "lighting": {
+    "source": "[FILL: per environment. Window + overhead typical for kitchen]",
+    "shadows": "[FILL: shadow direction on face, under-chin shadow from selfie angle]"
+  },
+
+  "negative_prompt": [
+    "background blur", "bokeh", "portrait mode",
+    "studio lighting", "ring light", "perfect skin",
+    "airbrushed", "beauty mode", "symmetrical face",
+    "model pose", "stock photo", "makeup", "styled hair",
+    "phone visible in frame", "mirror selfie",
+    "products in frame", "supplement bottle", "branded items",
+    "exaggerated expression", "theatrical reaction",
+    "different person than reference",
+    "[FILL: add character-specific negatives like 'missing eyebrow scar']"
+  ]
+}

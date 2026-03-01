@@ -1,79 +1,92 @@
-# Image Prompt Guide — AI-Generated UGC Stills
+# 08 — Image Prompt Guide (V5 JSON System)
 
-## Golden Rules
+## Core Rule: Always Use JSON Prompts
 
-1. **Always specify "UGC style"** — This prevents the AI from making polished studio shots
-2. **Always include aspect ratio** — Default: vertical 9:16, 1080x1920
-3. **Always describe the person FIRST** — Age, gender, expression, clothing, then setting
-4. **Always specify lighting** — "Natural lighting" or specific (golden hour, bathroom lighting, etc.)
-5. **Always include camera angle** — Selfie, eye-level, slightly below, POV, over-shoulder
-6. **Never use celebrity names** — Describe the look instead
-7. **Include the product naturally** — "holding a [color] supplement bottle" not "holding [Brand Name]"
+**Never write flat paragraph prompts.** Every image generation prompt uses structured JSON from the templates in `system/templates/`. This gives precise control over every element and makes failures diagnosable.
 
-## Prompt Structure
+## The 4-Stage Pipeline
+
+Generate images in stages. Never skip ahead.
 
 ```
-[SUBJECT]: [age] [gender], [ethnicity/appearance], [expression], [clothing], [pose/action]
-[SETTING]: [location], [key props], [background details]
-[LIGHTING]: [type and direction]
-[CAMERA]: [angle], [distance], [style]
-[STYLE]: UGC style, iPhone photo quality, natural lighting, vertical 9:16
-[MOOD]: [emotional tone]
+Stage 1: CHARACTER CAST → neutral expression, no scene, no product
+Stage 2: SCENE + EXPRESSION → character in environment with emotion, no product
+Stage 3: PRODUCT INTEGRATION (Frame A) → character + product + scene + expression
+Stage 4: FRAME B → expression change ONLY, from Frame A reference
 ```
 
-## Complete Prompt Examples
+### Why Stages Matter
+If you combine everything in one prompt and it looks wrong, you can't tell what failed — was it the character, the expression, the product placement, or the scene? Stages isolate variables.
 
-### Avatar Hero Shot (Selfie Style)
-```
-Warm approachable woman, late 30s, natural beauty, gentle smile, wearing a sage linen top, holding a white supplement bottle at chest height, looking directly at camera with friendly expression. Modern bright kitchen background with morning sunlight through windows, white marble countertop with fresh fruits. Natural golden morning light from the left. Selfie angle, slightly above eye level, close-up. UGC style, iPhone photo quality, natural lighting, vertical 9:16, candid feel.
-```
+## Templates (in `system/templates/`)
 
-### Product Shot (Lifestyle)
-```
-A sleek matte black supplement bottle with green label sitting on a clean white marble bathroom vanity, next to a glass of water and a small plant. Morning bathroom lighting, soft and even. Straight-on angle, product centered, shallow depth of field. Product photography meets UGC aesthetic, natural lighting, vertical 9:16.
-```
+| Template | Stage | File | Use When |
+|----------|-------|------|----------|
+| Avatar Cast | 1 | `avatar-cast.json` | Creating/locking a new character |
+| Scene Expression | 2 | `scene-expression.json` | Testing character in a scene with emotion |
+| Product Integration A | 3 | `product-integration-frame-a.json` | Adding product to scene (Frame A) |
+| Frame B | 4 | `frame-b.json` | Expression change from Frame A |
+| Veo Interpolation | — | `veo-interpolation.json` | Animating Frame A → B into video |
 
-### Problem State (Tired/Frustrated)
-```
-Tired woman, early 30s, dark circles under eyes, messy bun, wearing oversized grey t-shirt, sitting at a cluttered desk with laptop, rubbing her temples with both hands, coffee cup empty beside her. Home office, afternoon, grey overcast light from window. Eye-level angle, medium shot. UGC style, iPhone photo quality, realistic, vertical 9:16. Mood: exhaustion, relatable frustration.
-```
+## How to Use a Template
 
-### Solution State (Energized/Happy)
-```
-Same woman as before but now energized and glowing, hair down and styled, wearing a fitted olive green top, standing in a bright modern kitchen holding a green smoothie in one hand and a white supplement bottle in the other, genuine smile. Bright morning sunlight flooding in, clean countertops, fresh fruit visible. Selfie angle from slightly below, warm lighting. UGC style, iPhone photo quality, vertical 9:16. Mood: vitality, confidence, "I found the thing."
-```
+1. Open the template JSON
+2. Fill every `[FILL: ...]` field using data from:
+   - `brand.json` — brand colors, tone
+   - `avatar.json` or `cast-prompt.json` — character details
+   - `product.json` — product physical specs
+   - Script file — what's happening in this shot
+3. Attach the specified reference images
+4. Paste the filled JSON as your generation prompt
 
-### Unboxing Frame
-```
-Overhead POV shot of two hands opening a kraft shipping box on a light wood table, revealing a premium supplement bottle nestled in tissue paper with a small thank-you card visible. Soft natural window light from the top. Bird's eye view, close-up on hands and box. UGC style, iPhone photo quality, vertical 9:16. Mood: anticipation, excitement.
-```
+## Critical Rules (Battle-Tested)
 
-### CTA End Frame
-```
-Clean product shot: [color] supplement bottle centered on a minimal surface, surrounded by [2-3 relevant ingredients/props]. Soft gradient background matching brand colors. Product name clearly visible. Space at top for text overlay. Clean, bright, professional but not overly polished. Vertical 9:16.
-```
+These are from `system/rules/v5-lessons.json` — every one learned from a real failure:
 
-## Avatar Consistency Tips
+1. **Script BEFORE images.** Always write the script first
+2. **Expression at 30% intensity.** What you think is subtle is still too much
+3. **Gaze 2-3° off-camera.** Dead-center = AI-looking. Slightly off = selfie-authentic
+4. **Products from reference images ONLY.** Never describe products in text — attach a photo
+5. **Frame B uses ONLY Frame A as reference.** One image, not two
+6. **5 fingers. Always specify.** AI hands fail without explicit instruction
+7. **Signature details on every character.** 2-3 unique identifiers (scars, streaks, asymmetry) that you verify in every generation
+8. **Deep DOF, no blur.** iPhone selfies use deep focus. Portrait mode blur = instant AI tell
+9. **Product scale must match between frames.** Specify physical dimensions
 
-When generating multiple frames for the same ad:
-- **Copy-paste the exact avatar description** across all frames
-- Specify "same person as previous frame" won't work — be explicit every time
-- Keep clothing consistent: "wearing a sage linen top" in every frame
-- Keep hair consistent: "brown hair in a loose bun" in every frame
-- Only change: expression, pose, setting, and action
+## Avatar System
 
-## Product Integration Tips
+Each brand has avatars in `brands/[brand]/avatars/`. An avatar includes:
 
-- **Don't name the brand** in the prompt — describe the bottle/packaging visually
-- "A sleek matte black bottle with a green leaf logo" > "[Brand Name] bottle"
-- Show the product being USED, not just displayed
-- Product should feel like a natural part of the scene, not the centerpiece (except CTA frame)
+- **avatar.json** — Full character spec with signature details, physical description, styling, expression asymmetry, and a reusable `prompt_block`
+- **reference.jpg** — The locked character image (generated from cast template, saved here)
+- **cast-prompt.json** — The original casting prompt (for re-casting if needed)
 
-## Common Mistakes to Avoid
+### Character Consistency
+The key to consistent characters across shots:
+1. Cast with neutral expression (Stage 1)
+2. Define 3 signature details (primary/secondary/tertiary)
+3. Include verification checks: "Is the grey streak visible? If not, regenerate"
+4. Always attach reference.jpg to every subsequent prompt
+5. Copy `prompt_block.avatar_reference_instruction` into every prompt
 
-❌ "Beautiful woman holding supplement" (too vague)
-❌ "Professional photo of product" (not UGC style)
-❌ "High quality studio lighting" (breaks UGC feel)
-❌ Forgetting to specify vertical 9:16
-❌ Using different descriptions of the same person across frames
-❌ "Realistic photo" without specifying iPhone/UGC quality
+## Production Boards
+
+The final output for each ad is a **production board** (`shots/[ID]-production-board.json`). This contains:
+
+- Ad metadata (duration, format, hook line, avatar, product)
+- Visual storyboard (second-by-second)
+- Shot-by-shot JSON prompts ready to paste into image gen
+- Reference image chains (which output feeds into which input)
+- Text overlays per shot
+
+Production boards are the handoff document — everything needed to generate the complete ad.
+
+## Negative Prompts
+
+Always include negative prompts. Common ones for UGC-style:
+- `background blur`, `bokeh`, `portrait mode`
+- `studio lighting`, `ring light`, `perfect skin`
+- `airbrushed`, `beauty mode`, `symmetrical face`
+- `model pose`, `stock photo`
+- `phone visible in frame`
+- Plus character-specific negatives (e.g., "missing chin scar")

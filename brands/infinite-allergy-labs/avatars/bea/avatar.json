@@ -1,0 +1,63 @@
+{
+  "_avatar": "BRAIN_FOG_BEA",
+  "_version": "1.0",
+  "_brand": "Infinite Allergy Labs",
+  "_status": "LOCKED — reference image selected, use for all campaign shots",
+  "_reference_image": "reference.jpg (save the chosen generation here)",
+
+  "identity": {
+    "name": "Bea",
+    "full_name": "Brain Fog Bea",
+    "age": 35,
+    "heritage": "South Asian-American. Born and raised in the US. Reads as American woman",
+    "persona_match": "Mystery Symptom Maria — chronic symptoms, doctor dismissals, finally taking testing into her own hands"
+  },
+
+  "signature_details": {
+    "primary": {
+      "feature": "White/grey streak at left temple",
+      "description": "Approximately 1cm wide, starting at left temple hairline, running back into the hair. Natural premature greying, NOT dyed or styled. High contrast against dark brown/black hair. Visible even in messy bun",
+      "verification": "CHECK: Is the grey streak visible at the left temple? If not, regenerate"
+    },
+    "secondary": {
+      "feature": "Horizontal chin scar",
+      "description": "8mm long, slightly indented, horizontal. Childhood fall scar. Catches light differently — appears lighter/shinier than surrounding brown skin",
+      "verification": "CHECK: Look for the chin scar. May be subtle in some angles. Acceptable if lighting doesn't catch it, but should be present in close-ups"
+    },
+    "tertiary": {
+      "feature": "Asymmetric eyebrows",
+      "description": "Left eyebrow is straighter and thinner. Right eyebrow has a noticeably higher arch. Creates a permanent subtle 'really?' micro-expression at rest",
+      "verification": "CHECK: Are the brows different shapes? Left straighter, right more arched? This is the hardest detail for models to maintain — always verify"
+    }
+  },
+
+  "physical_description": {
+    "skin": "Medium brown with warm golden undertones. Under-eye circles are darker brown (hyperpigmentation — melanin-based, NOT purple). Visible skin texture on forehead (tiny bumps, slight congestion). Pores visible on nose and inner cheeks. One faint dark spot on left cheek from old blemish",
+    "lips": "Naturally pigmented (deeper brownish-pink). Slightly dry with peeling at corners",
+    "hair": "Dark brown/black, thick, wavy natural texture. Long past shoulders. Default state: loose messy low bun falling apart — wispy pieces escaping around face, neck, and temples. Grey streak visible at left temple. Baby hairs at temples. Usually day-two hair, not freshly washed",
+    "build": "Average. Not notably thin or heavy. Relaxed posture, tends to slouch slightly when tired"
+  },
+
+  "default_styling": {
+    "top": "Faded black v-neck tee. Soft and thin from years of overwashing. Relaxed fit, slightly stretched neckline. The black has faded to charcoal. Small stain near hem",
+    "alternatives": ["Oversized grey crewneck sweatshirt", "Washed-out navy henley", "White tank under open flannel"],
+    "jewelry": {
+      "nose": "Gold nose stud, left nostril, tiny, barely noticeable. Catches light occasionally",
+      "ears": "MISMATCHED — left ear: small gold hoop (12mm diameter). Right ear: tiny gold stud. Always this configuration",
+      "wrist": "Black thin hair tie on right wrist, slightly stretched out"
+    },
+    "no_makeup": "Bea never wears makeup in ads. Her bare face IS the brand — real, unfiltered, relatable. No foundation, no concealer, no mascara, nothing"
+  },
+
+  "expression_asymmetry": {
+    "right_brow_dominant": true,
+    "notes": "Right eyebrow lifts higher in surprise, skepticism, and processing. Left brow stays flatter. This creates natural asymmetry in ALL expressions",
+    "smile_pattern": "When she smiles, left side lifts slightly before right. Creates a subtle knowing/wry quality",
+    "resting_face": "The brow asymmetry gives her a permanent 'really?' quality at rest. Reads as intelligent and slightly skeptical — perfect for the 'tired of not getting answers' brand story"
+  },
+
+  "prompt_block": {
+    "_usage": "Copy the avatar_reference_instruction below into ANY prompt that needs Bea. Attach her reference.jpg as the character reference image",
+    "avatar_reference_instruction": "Subject is a 35-year-old American woman, South Asian-American heritage, medium brown skin with warm golden undertones. KEY IDENTITY MARKERS: (1) distinctive white/grey streak starting at left temple, approximately 1cm wide, running back from hairline — very visible against dark hair, (2) small horizontal scar on chin, 8mm, slightly indented, catches light, (3) asymmetric eyebrows — left is straighter/thinner, right has higher arch. Hair is dark brown/black, thick, wavy, in a loose messy low bun with pieces escaping. Under-eye circles are brown hyperpigmentation. Gold nose stud left nostril. Mismatched earrings: left small gold hoop, right tiny gold stud. Black hair tie on right wrist. No makeup. Wearing faded black v-neck tee. MATCH THE ATTACHED REFERENCE IMAGE FOR FACE IDENTITY"
+  }
+}

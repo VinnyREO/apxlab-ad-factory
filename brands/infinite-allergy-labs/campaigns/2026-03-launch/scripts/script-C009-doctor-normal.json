@@ -1,0 +1,125 @@
+{
+  "script": {
+    "concept_id": "C009",
+    "concept_name": "Doctor Said Everything's Normal",
+    "hook_type": "problem_agitate_solve",
+    "target_persona": "Mystery Symptom Maria",
+    "star_product": "Food Allergy & Sensitivity Test (F.A.S.T. Panel)",
+    "platform": "Meta Reels / Instagram Reels / TikTok",
+    "duration": "15 seconds",
+    "format": "9:16 vertical",
+
+    "hook_line": "my doctor said 'everything looks normal' for the third time",
+    "emotional_arc": "Frustration/invalidation → taking control → vindication → empowerment",
+
+    "beats": {
+      "second_0_3": {
+        "name": "HOOK — The Frustration",
+        "action": "Woman on couch or bed, casual home setting. She looks exhausted and frustrated. Not crying, not dramatic — just TIRED of not having answers. Looking at camera with a 'you know what I mean' expression. Slight eye roll or head tilt that says 'here we go again'",
+        "text_overlay": "my doctor said 'everything looks normal' for the third time",
+        "audio": "Quiet home ambient. Maybe a sigh",
+        "frame_type": "FRAME_A → FRAME_B",
+        "frame_a_expression": "Tired frustration. Under-eye circles visible. Lips pressed together (holding back emotion). Brow slightly furrowed. Looking at camera with exhausted directness. NOT sad — frustrated",
+        "frame_b_expression": "Slight eye roll transitioning to determination. Jaw sets. 'Fine, I'll figure it out myself' energy. Subtle shift from defeated to decided",
+        "character_notes": "Cozy home clothes. Hair messy but not styled-messy. Genuine end-of-day tired. Maybe blanket nearby. No product yet"
+      },
+
+      "second_3_7": {
+        "name": "BODY — Taking Control",
+        "action": "Cut to: her hands opening the test kit box on a table. Unboxing moment but casual, not precious. She pulls out the finger prick device. Shows how small and simple it is. This demystifies the process — it's just a finger prick, not scary medical stuff",
+        "text_overlay": "so I tested myself. 88 foods. 4 immune pathways. at home.",
+        "audio": "Box opening sound. Paper rustling. Quiet, intimate",
+        "frame_type": "POV_HANDS / UNBOXING",
+        "product_notes": "Focus on SIMPLICITY. The box is clean, the contents are organized, the finger prick device is small. This should feel easy, not intimidating. Her nails match the character (imperfect, real). Kitchen table or desk surface"
+      },
+
+      "second_7_11": {
+        "name": "PROOF — The Vindication",
+        "action": "Back to her face. Now she's looking at phone (results). Expression is a mix of vindication and surprise. Eyebrows up, mouth slightly open, nodding slowly. 'I KNEW something was wrong' energy. She might point at the phone screen or hold it up slightly",
+        "text_overlay": "turns out I had 12 food sensitivities my bloodwork never tested for",
+        "audio": "Quiet. Her saying 'twelve' under her breath (optional, if we add VO)",
+        "frame_type": "REACTION",
+        "expression": "Vindication + surprise. Brows raised, eyes wider, slow nod. Mouth forms an 'o' briefly then closes into a knowing press. Head tilts back slightly — the 'I KNEW IT' micro-movement. Not anger at doctor, just relief at being validated"
+      },
+
+      "second_11_13": {
+        "name": "RESULT — The Transformation Tease",
+        "action": "Quick montage feel (even in still frames): her in kitchen making food confidently, or her looking at the color-coded results report, or her looking noticeably more energized (subtle before/after within the same ad)",
+        "text_overlay": "3 weeks later: no more bloating, sleeping through the night",
+        "audio": "Slightly more upbeat ambient. Morning energy",
+        "frame_type": "LIFESTYLE",
+        "notes": "This is the aspirational beat. She looks BETTER — not dramatically, just subtly more alive. Better under-eyes, more relaxed shoulders, genuine energy in eyes"
+      },
+
+      "second_13_15": {
+        "name": "CTA",
+        "action": "Her holding the test kit box, looking at camera with a confident, warm expression. Direct address CTA energy. Text overlay drives the action",
+        "text_overlay": "covered by most insurance · results in 3-5 days · link in bio",
+        "audio": "Quiet resolve",
+        "frame_type": "PRODUCT_IN_HAND + CTA",
+        "expression": "Warm confidence. Not selling — sharing. 'You should do this too' without saying it. Genuine half-smile, direct gaze (still 2 degrees off camera)"
+      }
+    },
+
+    "shot_list": {
+      "shots_needed": [
+        {
+          "shot_id": "C009-A",
+          "type": "FRAME_A",
+          "description": "Exhausted frustration on couch/bed, looking at camera",
+          "template": "scene-expression.json",
+          "references_needed": ["character_ref"],
+          "notes": "Cozy home setting. Tired face. Under-eye circles. Frustration not sadness"
+        },
+        {
+          "shot_id": "C009-B",
+          "type": "FRAME_B",
+          "description": "Eye roll → determination shift",
+          "template": "frame-b.json",
+          "references_needed": ["C009-A output"],
+          "notes": "Subtle shift from defeated to decided. Jaw sets"
+        },
+        {
+          "shot_id": "C009-C",
+          "type": "POV_HANDS",
+          "description": "Hands opening test kit box, pulling out contents",
+          "template": "custom (POV overhead shot)",
+          "references_needed": ["combo-kit-front.jpg"],
+          "notes": "Her hands, her nails, table surface. Box opening. Emphasize simplicity. Character's nail details visible for continuity"
+        },
+        {
+          "shot_id": "C009-D",
+          "type": "REACTION",
+          "description": "Reading results on phone, vindicated surprise",
+          "template": "scene-expression.json",
+          "references_needed": ["character_ref"],
+          "notes": "The 'I KNEW IT' face. Vindication + surprise. Nodding"
+        },
+        {
+          "shot_id": "C009-E",
+          "type": "LIFESTYLE",
+          "description": "Her looking more energized, in kitchen, morning context",
+          "template": "scene-expression.json",
+          "references_needed": ["character_ref"],
+          "notes": "Same person but visibly better. Subtle: brighter eyes, less tension, natural smile. Kitchen morning light"
+        },
+        {
+          "shot_id": "C009-F",
+          "type": "PRODUCT_IN_HAND_CTA",
+          "description": "Holding test kit, warm confident expression, CTA moment",
+          "template": "product-integration-frame-a.json",
+          "references_needed": ["character_ref", "combo-kit-front.jpg"],
+          "notes": "Confidence, not selling. Genuine recommendation energy"
+        }
+      ],
+      "veo_animations": [
+        {
+          "clip_id": "C009-V1",
+          "input": ["C009-A", "C009-B"],
+          "duration": "2.5s",
+          "description": "Exhaustion → determination shift"
+        }
+      ]
+    }
+  }
+}

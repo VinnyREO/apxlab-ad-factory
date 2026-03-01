@@ -1,0 +1,110 @@
+{
+  "_framework": "SCRIPT_STRUCTURES",
+  "_version": "5.0",
+  "_description": "Script templates for different ad lengths and platforms. Fill in with brand/product specifics and hook type.",
+
+  "structures": {
+    "3s_hook_only": {
+      "name": "3-Second Hook (scroll stopper)",
+      "platform": "Meta Reels, TikTok (first 3 seconds)",
+      "purpose": "Stop the scroll. Create curiosity gap. Make them watch the next 10 seconds",
+      "beats": {
+        "second_0_1": {
+          "name": "THE FREEZE",
+          "description": "The attention-grabbing moment. An expression, a visual, something that breaks pattern",
+          "frame_type": "FRAME_A",
+          "text_overlay": "[FILL: optional hook text. Short. 5-8 words max]"
+        },
+        "second_1_3": {
+          "name": "THE SHIFT",
+          "description": "Expression evolves. Viewer is curious about what happened. Incomplete story creates gap",
+          "frame_type": "FRAME_B (interpolated from A via Veo)",
+          "text_overlay": "[FILL: optional continuation or reveal]"
+        }
+      }
+    },
+
+    "15s_full_ad": {
+      "name": "15-Second Full Ad",
+      "platform": "Meta Reels, Instagram Stories, TikTok",
+      "purpose": "Complete ad with hook, body, and CTA. Most common format for UGC ads",
+      "beats": {
+        "second_0_3": {
+          "name": "HOOK",
+          "description": "Scroll stopper. Reaction, shocking statement, or pattern interrupt",
+          "frame_types": ["FRAME_A", "FRAME_B"],
+          "text_overlay": "[FILL: hook text that creates curiosity]",
+          "audio": "Natural ambient + optional subtle sound effect"
+        },
+        "second_3_8": {
+          "name": "BODY / PROOF",
+          "description": "Show the product, explain the why, provide proof. This is where the story lives",
+          "frame_types": ["PRODUCT_HERO", "POV_USING", "TESTIMONIAL"],
+          "text_overlay": "[FILL: key claims, social proof, or story continuation]",
+          "audio": "Voiceover or text-on-screen. Music subtle if present"
+        },
+        "second_8_12": {
+          "name": "RESULT / TRANSFORMATION",
+          "description": "The payoff. How the product delivers. Before/after, feeling description, or demonstration",
+          "frame_types": ["BEFORE_AFTER", "TESTIMONIAL", "REACTION_PEAK"],
+          "text_overlay": "[FILL: result statement or transformation text]",
+          "audio": "Continue VO or let visuals carry"
+        },
+        "second_12_15": {
+          "name": "CTA",
+          "description": "Clear call to action. What should they do? Where should they go?",
+          "frame_types": ["PRODUCT_WITH_OFFER", "CTA_CARD"],
+          "text_overlay": "[FILL: CTA text. 'Link in bio', 'Use code X', 'Try it for $2/day']",
+          "audio": "Clear VO CTA or text only"
+        }
+      }
+    },
+
+    "30s_storytelling": {
+      "name": "30-Second Story Ad",
+      "platform": "Meta Reels, YouTube Shorts, TikTok",
+      "purpose": "Longer format for storytelling. Problem-solution arc or detailed testimonial",
+      "beats": {
+        "second_0_3": {
+          "name": "HOOK",
+          "description": "Same as 15s hook. Must stop scroll immediately",
+          "frame_types": ["FRAME_A", "FRAME_B"],
+          "text_overlay": "[FILL]"
+        },
+        "second_3_10": {
+          "name": "PROBLEM / SETUP",
+          "description": "Establish the pain point or context. Why should they care?",
+          "frame_types": ["TESTIMONIAL", "REACTION", "MULTIPLE_CUTS"],
+          "text_overlay": "[FILL: problem statement or setup]"
+        },
+        "second_10_18": {
+          "name": "SOLUTION / PRODUCT",
+          "description": "Introduce the product. Show it in use. Explain key benefits",
+          "frame_types": ["PRODUCT_IN_HAND", "POV_USING", "PRODUCT_HERO"],
+          "text_overlay": "[FILL: key claims, ingredient highlights]"
+        },
+        "second_18_25": {
+          "name": "PROOF / RESULTS",
+          "description": "Social proof, before/after, personal experience, data",
+          "frame_types": ["BEFORE_AFTER", "TESTIMONIAL", "SCREEN_RECORDING"],
+          "text_overlay": "[FILL: proof points, testimonial quotes]"
+        },
+        "second_25_30": {
+          "name": "CTA",
+          "description": "Clear, urgent CTA",
+          "frame_types": ["PRODUCT_WITH_OFFER", "CTA_CARD"],
+          "text_overlay": "[FILL: CTA with urgency]"
+        }
+      }
+    }
+  },
+
+  "script_writing_rules": [
+    "Hook must work WITHOUT audio (most people scroll with sound off)",
+    "Text overlays do the heavy lifting for first 3 seconds",
+    "One claim per beat. Don't stack multiple messages",
+    "CTA must be specific: not 'check it out' but 'Link in bio, code GLOW for 20% off'",
+    "Every beat should make sense as a standalone screenshot (for static ad variants)",
+    "Write the text overlays FIRST, then design the visuals around them"
+  ]
+}

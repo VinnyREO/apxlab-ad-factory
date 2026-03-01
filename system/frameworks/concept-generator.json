@@ -1,0 +1,62 @@
+{
+  "_framework": "CONCEPT_GENERATOR",
+  "_version": "5.0",
+  "_description": "System for generating ad concepts from brand vault + audience + hook frameworks. This is the 'I need 10 ads' engine.",
+
+  "how_to_use": {
+    "step_1": "Load brand.json and product.json for the target brand",
+    "step_2": "Load audience persona(s) to target",
+    "step_3": "Load hook-types.json for available frameworks",
+    "step_4": "Generate concepts by matching product ad_angles with hook frameworks and audience pain_points",
+    "step_5": "Output 10-15 concepts with enough detail to evaluate before scripting"
+  },
+
+  "concept_output_format": {
+    "concept_id": "[auto-increment: C001, C002, etc.]",
+    "hook_type": "[from hook-types.json]",
+    "target_persona": "[from audience folder]",
+    "ad_angle": "[from product.json ad_angles]",
+    "hook_line": "[the text overlay / opening line that stops the scroll]",
+    "story_summary": "[2-3 sentences describing what happens in the ad]",
+    "emotional_arc": "[emotion at start → middle → end]",
+    "key_claim": "[the ONE product claim this ad centers on]",
+    "estimated_duration": "[3s / 15s / 30s]",
+    "platform": "[Meta / TikTok / YouTube / All]",
+    "character_notes": "[which character archetype fits best, or existing locked character]",
+    "confidence": "[HIGH / MEDIUM / LOW based on how well angle + hook + audience align]"
+  },
+
+  "concept_generation_rules": [
+    "Every concept must center on ONE specific product claim or angle. Not multiple",
+    "Match hook type to audience pain point. Skeptic audiences get skeptic-to-believer hooks, not morning routine hooks",
+    "Generate at least 2 concepts per hook type to test different angles within the same framework",
+    "Include at least 3 HIGH confidence concepts (strong angle-hook-audience alignment)",
+    "Include 2-3 experimental/unexpected concepts (MEDIUM confidence, could outperform)",
+    "Never generate a concept that requires claims the brand can't support",
+    "Consider what's working for competitors (from brand.json competitive_landscape) and do it better or different",
+    "If performance data exists from previous campaigns, weight toward proven hook types and angles"
+  ],
+
+  "concept_matrix_example": {
+    "description": "Example: LYFEfuel x Skeptical Sarah x 10 concepts",
+    "matrix": [
+      {"hook": "shocked_discovery", "angle": "simplicity (replaces 5 supplements)", "confidence": "HIGH"},
+      {"hook": "shocked_discovery", "angle": "how you feel after 2 weeks", "confidence": "HIGH"},
+      {"hook": "skeptic_to_believer", "angle": "tried everything, this works", "confidence": "HIGH"},
+      {"hook": "skeptic_to_believer", "angle": "AG1 vs LYFEfuel comparison", "confidence": "MEDIUM"},
+      {"hook": "mind_blown", "angle": "cost per ingredient breakdown", "confidence": "HIGH"},
+      {"hook": "mind_blown", "angle": "what's actually in competitors", "confidence": "MEDIUM"},
+      {"hook": "problem_agitate_solve", "angle": "cabinet full of supplements", "confidence": "HIGH"},
+      {"hook": "secret_share", "angle": "what my nutritionist actually takes", "confidence": "MEDIUM"},
+      {"hook": "morning_routine", "angle": "one scoop replaces everything", "confidence": "MEDIUM"},
+      {"hook": "before_after_subtle", "angle": "2 weeks of consistent use (skin/energy)", "confidence": "MEDIUM"}
+    ]
+  },
+
+  "approval_workflow": {
+    "step_1": "Present all 10-15 concepts with confidence ratings",
+    "step_2": "Client or you picks 3-5 winners",
+    "step_3": "Approved concepts move to script-structures.json for scripting",
+    "step_4": "Rejected concepts archived with rejection reason (feeds back into future generation)"
+  }
+}

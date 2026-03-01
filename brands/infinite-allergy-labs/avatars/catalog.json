@@ -1,0 +1,66 @@
+{
+  "_catalog": "AVATAR_CATALOG",
+  "_brand": "Infinite Allergy Labs",
+  "_description": "Master list of all avatars for this brand. Tracks status, persona match, and performance notes",
+
+  "avatars": [
+    {
+      "name": "Bea",
+      "folder": "bea/",
+      "full_name": "Brain Fog Bea",
+      "status": "ACTIVE — casting complete, pending reference lock",
+      "persona_match": "Mystery Symptom Maria",
+      "age": 35,
+      "heritage": "South Asian-American",
+      "primary_signature": "White/grey streak at left temple",
+      "best_for": ["Testimonial style ads", "Doctor frustration angle", "Results reaction", "Symptom identification"],
+      "scripts_assigned": ["C001", "C004", "C009"],
+      "performance_notes": null
+    },
+    {
+      "name": "Tara",
+      "folder": "tara/",
+      "full_name": "Tired Eyes Tara",
+      "status": "READY TO CAST",
+      "persona_match": "Mystery Symptom Maria (younger skew)",
+      "age": 33,
+      "heritage": "Eastern European-American",
+      "primary_signature": "Deep-set under-eye hollows with visible purple-blue veins",
+      "best_for": ["Exhaustion/fatigue angle", "Sleep disruption ads", "Fair-skin symptom visibility"],
+      "scripts_assigned": [],
+      "performance_notes": null
+    },
+    {
+      "name": "Beth",
+      "folder": "beth/",
+      "full_name": "Bloated Beth",
+      "status": "READY TO CAST",
+      "persona_match": "Mystery Symptom Maria (Latina/Mediterranean demo)",
+      "age": 31,
+      "heritage": "Mediterranean/Latina-American",
+      "primary_signature": "Prominent beauty mark on right cheek + tooth gap",
+      "best_for": ["Bloating-specific ads", "Food trigger reveal", "Before/after subtle", "Younger demo targeting"],
+      "scripts_assigned": [],
+      "performance_notes": null
+    },
+    {
+      "name": "Emma",
+      "folder": "emma/",
+      "full_name": "Exhausted Emma",
+      "status": "READY TO CAST",
+      "persona_match": "Mystery Symptom Maria (Northern European demo)",
+      "age": 36,
+      "heritage": "Northern European-American",
+      "primary_signature": "Dense freckle band across nose bridge and cheeks",
+      "best_for": ["Skin sensitivity angle", "Visible symptom ads (redness, flushing)", "Older demo targeting"],
+      "scripts_assigned": [],
+      "performance_notes": null
+    }
+  ],
+
+  "strategy_notes": {
+    "why_multiple": "Different avatars let us A/B test which face performs best with the audience. Also lets us target different demographics within the same brand without changing the product or messaging — just the avatar",
+    "recommended_testing": "Start with Bea (broadest appeal). If ads perform, duplicate winning scripts with Tara/Beth/Emma to test demographic response. Compare CTR and CPA across avatars",
+    "max_active": "No more than 3 active avatars per brand at any time. More than that = split focus"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "campaign": {
+    "brand": "Infinite Allergy Labs",
+    "campaign_name": "2026-03-launch",
+    "star_product": "F.A.S.T. Panel (Combo: Food + Environmental) — $599.99",
+    "target_persona": "Mystery Symptom Maria",
+    "generated_date": "2026-02-27"
+  },
+
+  "concepts": [
+    {
+      "id": "C001",
+      "hook_type": "shocked_discovery",
+      "angle": "Hidden food trigger reveal",
+      "hook_line": "POV: you find out the food you eat EVERY DAY is causing your bloating",
+      "confidence": "HIGH",
+      "status": "APPROVED — scripted",
+      "script_file": "scripts/script-C001-hidden-trigger.json"
+    },
+    {
+      "id": "C002",
+      "hook_type": "skeptic_to_believer",
+      "angle": "Years of Googling symptoms",
+      "hook_line": "I spent 3 years Googling 'why am I always tired'",
+      "confidence": "HIGH",
+      "status": "PENDING"
+    },
+    {
+      "id": "C003",
+      "hook_type": "mind_blown",
+      "angle": "4 pathways superiority",
+      "hook_line": "wait… my old allergy test only checked ONE thing??",
+      "confidence": "HIGH",
+      "status": "PENDING"
+    },
+    {
+      "id": "C004",
+      "hook_type": "problem_agitate_solve",
+      "angle": "Symptom stack identification",
+      "hook_line": "Bloating. Fatigue. Brain fog. Skin flare-ups. Sound familiar?",
+      "confidence": "HIGH",
+      "status": "APPROVED — scripted",
+      "script_file": "scripts/script-C004-symptom-stack.json"
+    },
+    {
+      "id": "C005",
+      "hook_type": "secret_share",
+      "angle": "Insider knowledge",
+      "hook_line": "the test my functional medicine doctor actually recommends",
+      "confidence": "MEDIUM",
+      "status": "PENDING"
+    },
+    {
+      "id": "C006",
+      "hook_type": "shocked_discovery",
+      "angle": "Results day pure reaction",
+      "hook_line": "my food allergy results just came in…",
+      "confidence": "HIGH",
+      "status": "PENDING"
+    },
+    {
+      "id": "C007",
+      "hook_type": "before_after_subtle",
+      "angle": "Elimination effect",
+      "hook_line": "same person. 3 weeks apart. only change: I stopped eating my trigger foods",
+      "confidence": "MEDIUM",
+      "status": "PENDING"
+    },
+    {
+      "id": "C008",
+      "hook_type": "unboxing",
+      "angle": "Demystifying the kit",
+      "hook_line": "this just arrived and I'm honestly nervous",
+      "confidence": "MEDIUM",
+      "status": "PENDING"
+    },
+    {
+      "id": "C009",
+      "hook_type": "problem_agitate_solve",
+      "angle": "Doctor dismissal → self-advocacy",
+      "hook_line": "my doctor said 'everything looks normal' for the third time",
+      "confidence": "HIGH",
+      "status": "APPROVED — scripted",
+      "script_file": "scripts/script-C009-doctor-normal.json"
+    },
+    {
+      "id": "C010",
+      "hook_type": "mind_blown",
+      "angle": "Price reveal / insurance",
+      "hook_line": "I thought a real allergy test would cost thousands",
+      "confidence": "MEDIUM",
+      "status": "PENDING"
+    }
+  ]
+}

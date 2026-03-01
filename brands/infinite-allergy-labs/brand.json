@@ -1,0 +1,83 @@
+{
+  "brand": {
+    "name": "Infinite Allergy Labs",
+    "tagline": "Root Cause Allergy Testing",
+    "website": "https://infiniteallergylabs.com",
+    "dtc_landing_page": "https://www.infinite-allergy.com",
+    "dtc_storefront": "https://infinitewellnessusa.com",
+    "b2b_lab_site": "https://infiniteallergylabs.com",
+    "category": "Health / Medical Testing / DTC Diagnostics",
+    "phone": "1-833-FOODALLERGY",
+    "email": "clientservices@infiniteallergylabs.com",
+
+    "voice": {
+      "tone": "Empowering, clear, reassuring. Medical credibility without intimidation. The feeling of 'finally, answers.' Not clinical jargon, not woo-woo wellness. Straight answers for people who are tired of guessing what's wrong",
+      "avoid": ["Fear-mongering about allergies", "Overly clinical language", "Diagnosing or medical advice in ads", "Making it seem painful or complicated", "Claiming to cure anything"],
+      "embrace": ["Clarity and answers", "Empowerment through knowledge", "Simplicity of the process", "Relief from not knowing", "Taking control of your health"]
+    },
+
+    "visual_identity": {
+      "primary_colors": ["#1B2A4A (deep navy blue)", "#FFFFFF (white)"],
+      "secondary_colors": ["#F5F5F5 (light grey backgrounds)"],
+      "logo": "INFINITE wordmark in navy, with stylized M that forms an infinity-like geometric icon. 'ALLERGY LABS' underneath in smaller text",
+      "style": "Clean, medical-professional, trustworthy. Navy and white. Minimal design. Feels like a real lab, not a startup"
+    },
+
+    "what_they_do": "CLIA-certified, COLA-accredited clinical laboratory specializing EXCLUSIVELY in food and environmental allergy/sensitivity testing. They test 88 food antigens and 88 environmental allergens using multiple immune pathways (IgE, IgG, IgG4, C3b/d). Unlike broad labs, they ONLY do allergy testing — that's their entire focus",
+
+    "key_differentiators": [
+      "Tests 4 immune pathways (IgE, IgG, IgG4, C3b/d) — most competitors only test 1-2",
+      "88 food antigens OR 88 environmental allergens per test",
+      "CLIA certified + COLA accredited (real lab, not a gimmick)",
+      "3-5 business day turnaround (fastest in industry)",
+      "Both finger prick (at-home) and blood draw options",
+      "Color-coded easy-to-read results with food groupings",
+      "Free consultation with registered dietitian after results",
+      "Accepts insurance (can be as low as $25 + $90 physician fee with coverage)",
+      "Specialized — only do allergy testing, nothing else"
+    ],
+
+    "competitive_landscape": {
+      "competitors": ["Everlywell", "5Strands", "YorkTest", "Traditional allergist skin prick tests"],
+      "positioning": "More comprehensive than DTC competitors (4 immune pathways vs 1-2). More convenient than traditional allergist (at-home option). More specialized than broad testing labs. The 'gold standard' positioned as accessible"
+    },
+
+    "social_proof": {
+      "certifications": ["CLIA certified", "COLA accredited", "API participation"],
+      "providers_in_network": "2,500+",
+      "patients_tested": "32,000+",
+      "years": "5+ years pioneering lab testing",
+      "testimonials_themes": [
+        "Finally got answers after years of mystery symptoms",
+        "Eliminated trigger foods, symptoms reduced dramatically",
+        "Easy at-home process, results came fast",
+        "Didn't need sleep medicine anymore after eliminating trigger foods",
+        "Running performance improved after removing sensitivities",
+        "Detailed results with nutrition plan included"
+      ],
+      "real_testimonial_snippets": [
+        "I haven't taken my sleep medicine for last two weeks now and not having problem falling asleep",
+        "Since I started taking out the foods that I was sensitive to, I feel so much better! I can't even describe how much better my runs feel",
+        "I had a sensitivity to beans. It was fascinating to see my results and I am so pleased at the energy I've gained",
+        "The technological advancement was strikingly superior to the older methods I experienced 15 years ago, which were largely inconclusive"
+      ]
+    },
+
+    "dtc_messaging": {
+      "headline": "Find the Root Cause For a Healthier Life",
+      "subheadline": "Discover the foods that trigger your body and may cause inflammation, fatigue, weight challenges, or chronic health issues",
+      "product_name_dtc": "F.A.S.T. Panel Test",
+      "symptom_list_from_site": ["Fatigue", "Bloating", "Skin flare-ups", "Headaches", "Mood swings", "Inflammation", "Weight challenges", "Chronic health issues"],
+      "key_stat": "95% of all chronic conditions are associated with inflammation",
+      "insurance_messaging": "Accepts both insurance & cash. Many plans with out-of-network benefits reimburse part of the cost"
+    },
+
+    "process_for_DTC": {
+      "step_1": "Order kit online (shipped to your door)",
+      "step_2": "Collect sample (finger prick at home OR schedule blood draw)",
+      "step_3": "Ship sample back (prepaid return label included)",
+      "step_4": "Get results in 3-5 business days (online portal)",
+      "step_5": "Free consultation with registered dietitian to review results"
+    }
+  }
+}

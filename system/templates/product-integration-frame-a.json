@@ -1,0 +1,97 @@
+{
+  "_template": "PRODUCT_INTEGRATION_FRAME_A",
+  "_version": "5.0",
+  "_description": "Character + product + scene + expression. Stage 3. This produces Frame A (opening frame). Attach character ref + product ref.",
+  "_usage": "Two reference images: (1) locked character, (2) product packshot. Fill variables from character.json and product.json.",
+
+  "reference_images": {
+    "image_1": {
+      "role": "CHARACTER_REFERENCE",
+      "instruction": "[FILL: paste character's prompt_block.character_reference_instruction]"
+    },
+    "image_2": {
+      "role": "PRODUCT_REFERENCE",
+      "instruction": "[FILL: 'This is the product. Maintain EXACTLY:' + key visual elements from product.json packaging.label_elements]"
+    }
+  },
+
+  "subject": {
+    "LOCKED": "[FILL: all features from character.json]",
+    "hair": "[FILL: from character.json]",
+    "apparel": "[FILL: from character.json default_styling]",
+    "accessories": "[FILL: from character.json default_styling]"
+  },
+
+  "mood": {
+    "emotion": "[FILL: per script - Frame A expression at 30% intensity]",
+    "facial_expression": "[FILL: specific muscles, asymmetry, second of emotion]",
+    "energy": "[FILL: per script beat]"
+  },
+
+  "pose": {
+    "body_position": "[FILL: per script]",
+    "head_and_gaze": "Looking slightly off-camera, 2-3 degrees right. Chin slightly down. Head tilt: [FILL]",
+    "framing": "Chest-up selfie. Off-center. Horizon tilted. Phone below frame NOT visible"
+  },
+
+  "hands_and_fingers": {
+    "phone_hand": {
+      "action": "Below frame, phone NOT visible. Only finger edge",
+      "nail_details": "[FILL: from character.json]",
+      "CRITICAL": "5 fingers"
+    },
+    "product_hand": {
+      "action": "Holding product at chest height, slightly to one side",
+      "grip": "Natural casual grip. NOT display hold. Like holding a bag of chips. Fingers partially cover label. Brand name visible but not perfectly framed. Fingers wrap around middle, slightly crumpling flexible packaging",
+      "visibility": "Full hand visible gripping product. All 5 fingers accounted for (some behind product)",
+      "nail_details": "[FILL: same as phone hand]",
+      "CRITICAL": "5 fingers"
+    }
+  },
+
+  "product_integration": {
+    "position": "Product at chest/collarbone level. Does NOT block face or expression. Product in lower area of frame, face in upper area",
+    "angle": "20-30 degrees turned from camera. NOT perfectly facing camera. Label 60-70% readable",
+    "lighting_match": "SAME light source as face. Same shadow direction, same color temperature. Product exists in same physical space as person",
+    "condition": "Slightly used: opened, handled, part of daily routine. Not pristine factory-fresh",
+    "scale": "[FILL: from product.json packaging.scale_in_hand]"
+  },
+
+  "product_physical": {
+    "type": "[FILL: from product.json packaging.type]",
+    "height": "[FILL: from product.json packaging.dimensions]",
+    "width": "[FILL: from product.json packaging.dimensions]",
+    "material": "[FILL: from product.json packaging.material]",
+    "weight_feel": "[FILL: from product.json packaging.weight_when_partial]",
+    "scale_reference": "[FILL: from product.json packaging.scale_in_hand]"
+  },
+
+  "environment": {
+    "setting": "[FILL: per script. ALL IN SHARP FOCUS]",
+    "context_props": "[FILL: from product.json usage_context.props_in_scene]"
+  },
+
+  "camera": {
+    "device": "iPhone 15 Pro front camera, 23mm",
+    "DOF": "DEEP. Face AND product AND background all sharp. NO blur",
+    "processing": "Apple over-sharpened, warm-neutral",
+    "distortion": "23mm selfie distortion on face and product"
+  },
+
+  "lighting": {
+    "source": "[FILL: per environment]",
+    "on_product": "SAME light as face. Same highlights, shadows, color temperature. Product is lit by environment, NOT separately"
+  },
+
+  "negative_prompt": [
+    "background blur", "bokeh", "portrait mode",
+    "studio lighting", "ring light", "perfect skin",
+    "airbrushed", "beauty mode", "symmetrical face",
+    "phone visible", "mirror selfie",
+    "product perfectly facing camera", "product display pose",
+    "product floating", "product separately lit",
+    "wrong product colors", "wrong product shape",
+    "exaggerated expression", "theatrical",
+    "different person than reference"
+  ]
+}

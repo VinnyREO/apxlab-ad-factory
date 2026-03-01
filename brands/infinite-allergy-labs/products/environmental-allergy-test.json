@@ -1,0 +1,38 @@
+{
+  "product": {
+    "name": "Environmental Allergy Test",
+    "type": "At-home environmental allergy testing kit",
+    "sku": "ENV-88",
+    "store_url": "https://infinitewellnessusa.com/shop/",
+
+    "pricing": {
+      "self_pay": "$299.00",
+      "with_insurance": "May be covered with out-of-network benefits"
+    },
+
+    "what_it_tests": {
+      "antigens": "88 environmental allergens",
+      "categories": ["Molds", "Pet dander", "Pollens (seasonal)", "Dust mites", "Other perennial (year-round) allergens"],
+      "immune_pathway": "IgE reactions",
+      "covers": "Both seasonal AND perennial (year-round) allergies"
+    },
+
+    "symptoms_it_addresses": [
+      "Chronic congestion and sinus issues",
+      "Watery/itchy eyes",
+      "Sneezing and runny nose",
+      "Hives and skin reactions",
+      "Breathing difficulties",
+      "Swelling",
+      "Seasonal allergy flare-ups that never fully go away"
+    ],
+
+    "ad_angles": {
+      "strongest_hooks": [
+        "Why your allergies never go away (year-round triggers you don't know about)",
+        "The mold/dust/pet dander reveal (hidden home triggers)",
+        "Standard allergy meds aren't fixing it because you don't know the actual trigger"
+      ]
+    }
+  }
+}

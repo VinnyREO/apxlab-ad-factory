@@ -1,0 +1,138 @@
+{
+  "script": {
+    "concept_id": "C004",
+    "concept_name": "Symptom Stack — Sound Familiar?",
+    "hook_type": "problem_agitate_solve",
+    "target_persona": "Mystery Symptom Maria",
+    "star_product": "Food Allergy & Sensitivity Test (F.A.S.T. Panel)",
+    "platform": "Meta Reels / Instagram Reels / TikTok",
+    "duration": "15 seconds",
+    "format": "9:16 vertical",
+
+    "hook_line": "Bloating. Fatigue. Brain fog. Skin flare-ups. Sound familiar?",
+    "emotional_arc": "Identification ('that's me') → agitation → solution → relief",
+
+    "beats": {
+      "second_0_3": {
+        "name": "HOOK — The Symptom Call-Out",
+        "action": "Woman in bathroom mirror, morning. She looks tired — the kind of tired that sleep doesn't fix. She's touching her face, examining her skin, or pressing on her bloated stomach area. Not posing for camera — this is a private moment caught on front camera. She looks like she's about to Google her symptoms again",
+        "text_overlay": "Bloating. Fatigue. Brain fog. Skin flare-ups.",
+        "audio": "Bathroom ambient. Fan hum. Quiet",
+        "frame_type": "FRAME_A",
+        "frame_a_expression": "Tired resignation. Looking at herself in phone camera (checking how tired she looks). Not dramatic, not crying. Just... over it. The 'here we go again' morning face. Under-eye circles, slightly puffy. Examining herself",
+        "character_notes": "Bathroom setting. Morning. Hair messy from sleep. Oversized sleep shirt. No makeup obviously. Real morning skin — slightly red, puffy, textured. She's holding phone up to look at herself (selfie angle). Maybe touching jaw/chin or pressing on stomach area"
+      },
+
+      "second_3_4": {
+        "name": "HOOK EXTENSION — Sound Familiar?",
+        "action": "Same frame but she looks directly at camera now. Breaks the fourth wall. The 'I know you know exactly what I'm talking about' look",
+        "text_overlay": "Sound familiar?",
+        "audio": "Beat of silence",
+        "frame_type": "FRAME_B (from A)",
+        "frame_b_expression": "Direct connection. Tired but knowing. One eyebrow slightly raised. Lips press together then release. Direct gaze (breaks the 2-degree rule here intentionally — this is a moment of connection). 'Yeah, you too?' energy"
+      },
+
+      "second_4_8": {
+        "name": "BODY — The Hidden Cause",
+        "action": "Cut to kitchen. She's at counter with everyday foods spread out — bread, eggs, yogurt, coffee. Normal breakfast stuff. She pushes them aside revealing the test kit box underneath/behind them. The visual metaphor: these everyday foods might be the problem, and the test reveals which ones",
+        "text_overlay": "these could be caused by foods you eat every single day",
+        "audio": "Kitchen ambient. Items sliding on counter",
+        "frame_type": "PRODUCT_REVEAL",
+        "product_notes": "The test kit box should NOT be the hero of this shot — it emerges naturally from behind the food items. The foods are the visual anchor. She's looking at the foods with a 'could it really be you?' expression"
+      },
+
+      "second_8_11": {
+        "name": "PROOF — The Numbers",
+        "action": "Close-up of her holding the test kit box, turning it slightly. Then cut to or overlay showing the key stats. Her thumb traces the INFINITE branding",
+        "text_overlay": "88 foods tested · 4 immune pathways · results in 3-5 days",
+        "audio": "Quiet. Deliberate",
+        "frame_type": "PRODUCT_DETAIL",
+        "notes": "This is the credibility beat. The numbers do the selling. Her presence keeps it human and UGC. She's examining the box like she's deciding, not like she's presenting it"
+      },
+
+      "second_11_13": {
+        "name": "RESULT — The Answer",
+        "action": "Back to her face. She's now in the kitchen with better light (later in day or better angle). Expression is calm clarity. Not excited — relieved. The face of someone who finally has a path forward instead of guessing",
+        "text_overlay": "finally knowing > forever guessing",
+        "audio": "Slightly warmer ambient",
+        "frame_type": "TESTIMONIAL",
+        "expression": "Quiet clarity. Not smiling big, just... settled. Eyes steady, face relaxed, jaw unclenched. The tension from the bathroom morning scene is gone. This is the 'after' without being dramatic about it"
+      },
+
+      "second_13_15": {
+        "name": "CTA",
+        "action": "Test kit box on counter in morning light. Clean, simple. Text does the work",
+        "text_overlay": "most insurance accepted · free dietitian review · link in bio",
+        "audio": "Resolve",
+        "frame_type": "PRODUCT_CTA",
+        "notes": "End on the product in context (on her counter, in her life) not a sterile packshot. Her hand might be in frame resting near it"
+      }
+    },
+
+    "shot_list": {
+      "shots_needed": [
+        {
+          "shot_id": "C004-A",
+          "type": "FRAME_A",
+          "description": "Bathroom mirror morning, examining herself, tired",
+          "template": "scene-expression.json",
+          "references_needed": ["character_ref"],
+          "notes": "Bathroom setting. Morning light. No makeup. Real tired face. Selfie angle but she's looking at herself, not performing"
+        },
+        {
+          "shot_id": "C004-B",
+          "type": "FRAME_B",
+          "description": "Same bathroom, breaks fourth wall, direct look at camera",
+          "template": "frame-b.json",
+          "references_needed": ["C004-A output"],
+          "notes": "Only change: gaze shifts to direct camera contact. Expression shifts to knowing/connected. Intentional fourth wall break"
+        },
+        {
+          "shot_id": "C004-C",
+          "type": "PRODUCT_REVEAL",
+          "description": "Kitchen counter with everyday foods, test kit revealed behind/among them",
+          "template": "product-integration-frame-a.json (adapted)",
+          "references_needed": ["character_ref", "combo-kit-front.jpg"],
+          "notes": "Foods are the visual hero initially: bread, eggs, yogurt, coffee. Test kit emerges. Metaphor: these foods could be the problem"
+        },
+        {
+          "shot_id": "C004-D",
+          "type": "PRODUCT_DETAIL",
+          "description": "Hands holding test kit, examining it closely",
+          "template": "product-integration-frame-a.json",
+          "references_needed": ["character_ref", "combo-kit-front.jpg"],
+          "notes": "Close-up. Her deciding, not presenting. Thumb near branding. INFINITE text visible"
+        },
+        {
+          "shot_id": "C004-E",
+          "type": "TESTIMONIAL",
+          "description": "Kitchen, better light, calm clarity expression",
+          "template": "scene-expression.json",
+          "references_needed": ["character_ref"],
+          "notes": "The 'after' face. Same person but tension gone. Relaxed jaw, steady eyes, subtle warmth. Not a transformation — just clarity"
+        },
+        {
+          "shot_id": "C004-F",
+          "type": "PRODUCT_CTA",
+          "description": "Test kit on counter in morning light, her hand nearby",
+          "template": "custom (product lifestyle)",
+          "references_needed": ["combo-kit-front.jpg"],
+          "notes": "Clean product shot but in HER kitchen, not studio. Morning context. Hand edge in frame keeps it human"
+        }
+      ],
+      "veo_animations": [
+        {
+          "clip_id": "C004-V1",
+          "input": ["C004-A", "C004-B"],
+          "duration": "2s",
+          "description": "Self-examination → direct camera connection (fourth wall break)"
+        }
+      ]
+    },
+
+    "creative_notes": {
+      "why_this_works": "The bathroom mirror opening is DEEPLY relatable for the target persona. Every woman with mystery symptoms has had this exact morning — looking at herself and wondering why she feels/looks this way. The text overlay calling out specific symptoms creates instant identification ('that's me'). The fourth wall break creates intimacy and connection. Then the food reveal reframes everyday items as potential culprits — this is the 'mind blown' moment. The ad doesn't need to be dramatic because the REALIZATION is dramatic enough",
+      "risk": "Bathroom setting could feel too intimate or unflattering. Solution: keep it morning-real but not harsh. Window light, not overhead fluorescent. She looks tired, not sick"
+    }
+  }
+}

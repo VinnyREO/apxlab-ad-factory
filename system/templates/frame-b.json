@@ -1,0 +1,62 @@
+{
+  "_template": "FRAME_B",
+  "_version": "5.0",
+  "_description": "Generate ending frame from Frame A. Stage 4. Attach ONLY Frame A as reference (ONE image). Product is already in Frame A.",
+  "_usage": "Single reference image: Frame A output. Fill changes per script. Everything not listed in changes stays IDENTICAL.",
+
+  "reference_images": {
+    "image_1": {
+      "role": ["CHARACTER_REFERENCE", "SCENE_REFERENCE", "START_FRAME_REFERENCE"],
+      "instruction": "This is Frame A. It defines EVERYTHING: person, product, environment, lighting, camera. Generate Frame B where ONLY the specified changes occur. Everything else is pixel-identical"
+    }
+  },
+
+  "frame_b_changes": {
+    "timing": "[FILL: X seconds after Frame A. Typically 2-3 seconds]",
+    "script_beat": "[FILL: what happens at this moment per script. e.g. 'She leans in to verify what she's seeing']",
+    "expression": "[FILL: specific changes FROM Frame A expression. Not the absolute expression, the DELTA. e.g. 'Eyes narrow from wide to focused, brow furrows, mouth closes from parted']",
+    "head_position": "[FILL: degrees of change. e.g. 'Tilt reduces from 3° to 1°, head moves forward 5cm, chin juts slightly']",
+    "distance_to_camera": "[FILL: 'CLOSER by Xcm' or 'SAME' or 'FURTHER by Xcm'. If closer, face appears larger in frame and distortion increases]",
+    "body": "[FILL: e.g. 'Lean forward from waist, shoulders hunch slightly' or 'SAME']",
+    "free_hand": "[FILL: if hand position changes, specify. Otherwise 'IDENTICAL to Frame A']",
+    "product_in_hand": "IDENTICAL to Frame A. Same grip, same angle. Scale adjusts proportionally with distance change"
+  },
+
+  "product_scale_consistency": {
+    "rule": "Product must scale PROPORTIONALLY with face size change between frames",
+    "if_closer": "Face is LARGER in Frame B → product must ALSO be larger (same hand, same distance to camera as face, they scale together)",
+    "if_same_distance": "Face same size → product same size",
+    "if_further": "Face is SMALLER → product also smaller",
+    "physics": "Product is in the same hand at the same relative distance from camera as the face. Model CANNOT enlarge face without enlarging product",
+    "common_failure": "Model shrinks product when face gets larger. This is physically impossible. Regenerate if this occurs"
+  },
+
+  "MUST_STAY_IDENTICAL": [
+    "Character identity (face, skin, moles, scars, all signature details)",
+    "Clothing (same outfit, same wrinkles, same collar position)",
+    "Accessories (same items, same positions)",
+    "Product (same item, same grip, PROPORTIONAL scale)",
+    "Environment (same background, same objects, nothing moved)",
+    "Camera position (phone hasn't moved, framing anchor same)",
+    "Lighting source and color temperature",
+    "Depth of field (deep, everything sharp)"
+  ],
+
+  "allowed_micro_changes": [
+    "Lighting intensity on face (if distance changed, physically accurate)",
+    "Screen glow on chin (brighter if closer to phone)",
+    "Hair strand position (1-2 strands shift from head movement)",
+    "Clothing micro-wrinkle (from body position shift)"
+  ],
+
+  "negative_prompt": [
+    "different person", "different clothing",
+    "different background", "different lighting direction",
+    "different camera angle", "different product",
+    "product missing from hand", "product changed grip",
+    "product smaller than Frame A (if subject is closer)",
+    "background objects moved", "new objects appeared",
+    "phone visible in frame", "background blur",
+    "[FILL: expression-specific negatives per script, e.g. 'smiling' if script says scrutinizing]"
+  ]
+}

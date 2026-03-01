@@ -1,0 +1,64 @@
+{
+  "character": {
+    "name": "Olive Girl",
+    "created": "2026-02-27",
+    "persona_match": "Skeptical Sarah",
+    "status": "LOCKED",
+
+    "demographics": {
+      "age": 28,
+      "gender": "Female",
+      "skin_tone": "Warm olive, ethnically ambiguous, Mediterranean-leaning",
+      "build": "Average, natural"
+    },
+
+    "signature_details": {
+      "primary": {
+        "detail": "Small scar cutting through tail of left eyebrow, creating a natural gap in brow hair. Roughly 4mm wide. Childhood injury look",
+        "tier": "FACE_ANCHOR",
+        "verification": "Visible in every frame. If missing, character didn't lock"
+      },
+      "secondary": {
+        "detail": "Constellation of 3 small moles forming a triangle on left cheek near jaw. 2 dark brown, 1 lighter. Slightly raised, actual moles not beauty marks",
+        "tier": "FACE_ANCHOR",
+        "verification": "Visible in front and three-quarter views"
+      },
+      "tertiary": {
+        "detail": "Slight bump on nose bridge (dorsal hump). Nose is not straight in profile. Visible in profile and three-quarter views",
+        "tier": "FACE_ANCHOR",
+        "verification": "Visible from most angles"
+      }
+    },
+
+    "locked_features": {
+      "face": "Olive skin, warm undertones, visible pores across nose and inner cheeks, under-eye circles (purple-blue, not concealed), natural mauve-pink lips slightly chapped",
+      "hair": "Dark brown, shoulder-length, wavy natural texture. Day-two state. Half pulled back with tortoiseshell claw clip, messy pieces falling around face. Baby hairs at temples. Natural, not colored (subtle darker roots)",
+      "expression_asymmetry": {
+        "dominant_side": "left",
+        "details": "Left eyebrow raises higher during surprise. Right side of mouth opens slightly wider. Left eye opens wider (dominant eye). Right nostril flares more"
+      }
+    },
+
+    "default_styling": {
+      "apparel": "Oversized washed-out navy crewneck sweatshirt, collar stretched from years of wear, slides off one shoulder showing bare skin and thin black bra strap",
+      "accessories": [
+        "Small gold hoop earrings (slightly mismatched sizes, one thicker gauge)",
+        "Thin gold chain necklace with tiny evil eye pendant",
+        "Faded overstretched hair tie on right wrist"
+      ],
+      "nails": "Short natural nails, slightly uneven. Remnants of pale pink polish on thumb and ring finger only (grown out, mostly chipped off)"
+    },
+
+    "reference_images": {
+      "neutral_lock": "reference.jpg",
+      "shocked_discovery_no_product": null,
+      "shocked_discovery_with_product": null,
+      "frame_b_lean_in": null,
+      "notes": "Add generated images here as they are approved"
+    },
+
+    "prompt_block": {
+      "character_reference_instruction": "Maintain EXACTLY: facial structure, warm olive skin tone, eyebrow scar on left brow (4mm gap in brow hair), 3-mole triangle on left jaw (2 dark, 1 lighter), nose bump (dorsal hump on bridge), eye shape and spacing, lip shape (mauve-pink, slightly chapped). Left eyebrow naturally higher than right. Expression asymmetry: left side dominant for brow raise, right side dominant for mouth and nostril"
+    }
+  }
+}

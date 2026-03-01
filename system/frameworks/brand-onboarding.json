@@ -1,0 +1,231 @@
+{
+  "_process": "BRAND_ONBOARDING",
+  "_version": "5.0",
+  "_description": "Step-by-step process for onboarding a new brand into the APXlab system. Input: website URL. Output: complete brand vault ready for ad production.",
+  "_trigger": "User says 'onboard [brand name]' or 'new brand: [url]'",
+
+  "phase_1_discovery": {
+    "name": "Website Scrape & Intel Gathering",
+    "steps": [
+      {
+        "step": 1,
+        "action": "Scrape the main website URL provided",
+        "what_to_extract": [
+          "Brand name and tagline",
+          "All product pages (names, descriptions, pricing)",
+          "About page (mission, story, founding)",
+          "Testimonials and reviews",
+          "Certifications, awards, social proof numbers",
+          "Visual identity (colors, logo description, style)",
+          "Contact info, social links"
+        ]
+      },
+      {
+        "step": 2,
+        "action": "Identify ALL websites/domains for this brand",
+        "look_for": [
+          "B2B vs DTC sites (may have separate domains)",
+          "Landing pages (often different domain)",
+          "International sites",
+          "Social profiles (Instagram, TikTok, YouTube, LinkedIn)"
+        ],
+        "note": "The DTC-facing site is the one we care about for ads. B2B site may have better product detail though"
+      },
+      {
+        "step": 3,
+        "action": "Scrape the DTC store/shop page specifically",
+        "what_to_extract": [
+          "All products with EXACT pricing",
+          "Product images (download all available)",
+          "Product descriptions and claims",
+          "Any bundles, combos, or subscription options",
+          "Shipping info, return policy"
+        ]
+      },
+      {
+        "step": 4,
+        "action": "Search for competitor and market context",
+        "queries": [
+          "[brand name] reviews",
+          "[product category] best alternatives",
+          "[brand name] vs [competitor]",
+          "[product category] DTC brands"
+        ],
+        "what_to_extract": [
+          "Who are the main competitors",
+          "How is this brand positioned vs competitors",
+          "What do customers love/hate in reviews",
+          "What ad angles are competitors using"
+        ]
+      }
+    ]
+  },
+
+  "phase_2_product_analysis": {
+    "name": "Star Product Selection",
+    "steps": [
+      {
+        "step": 5,
+        "action": "Rank products by ad potential",
+        "scoring_criteria": {
+          "AOV": "Higher price = more ad budget per sale = more room for CPA",
+          "value_story": "Does this product have a clear 'why this vs alternatives' angle?",
+          "visual_appeal": "Is the product photogenic? Does it look good in someone's hand?",
+          "emotional_hook": "Does this product solve a painful problem or deliver a desirable outcome?",
+          "repeatability": "Is this a one-time purchase or recurring? (recurring = higher LTV = more ad budget)",
+          "bundle_opportunity": "Can we upsell from single to bundle/combo?"
+        }
+      },
+      {
+        "step": 6,
+        "action": "Select STAR PRODUCT for initial ad campaign",
+        "rules": [
+          "Start with ONE product. Don't split focus across multiple products on day 1",
+          "Pick the product with highest AOV that still has a strong emotional hook",
+          "If a bundle/combo exists that saves money vs buying separately, lead with that (value angle built in)",
+          "The star product should have the broadest audience appeal within the target demo"
+        ],
+        "output": "Star product identified with reasoning"
+      }
+    ]
+  },
+
+  "phase_3_vault_creation": {
+    "name": "Build Brand Vault Files",
+    "steps": [
+      {
+        "step": 7,
+        "action": "Create brand folder structure",
+        "command": "mkdir -p /APXlab/brands/[brand-name]/{products,audience,characters,campaigns/[campaign-name]/{scripts,shots,output,performance}}"
+      },
+      {
+        "step": 8,
+        "action": "Create brand.json",
+        "template_fields": [
+          "name, tagline, website(s)",
+          "category",
+          "voice (tone, avoid, embrace)",
+          "visual_identity (colors, logo, style)",
+          "key_differentiators (list)",
+          "competitive_landscape",
+          "social_proof (certifications, numbers, testimonial themes)",
+          "process_for_DTC (how the customer journey works)"
+        ]
+      },
+      {
+        "step": 9,
+        "action": "Create product JSON for EACH product",
+        "template_fields": [
+          "name, type, sku, pricing",
+          "packaging (type, material, dimensions, colors, label_elements, scale_in_hand)",
+          "reference_images (filenames + visual descriptions)",
+          "key_claims / what_it_does",
+          "usage_context (when, how, props_in_scene)",
+          "symptoms_it_addresses OR problems_it_solves",
+          "ad_angles (strongest_hooks, proof_points, emotional_triggers)"
+        ]
+      },
+      {
+        "step": 10,
+        "action": "Save product reference images",
+        "sources_priority": [
+          "1. Client provides high-res product photos (BEST)",
+          "2. Download from website product pages",
+          "3. Download from Amazon/retail listings if available",
+          "4. Screenshot from website as last resort"
+        ],
+        "images_needed": [
+          "Product front/hero shot (REQUIRED for image gen reference)",
+          "Product back/label (useful for claims)",
+          "Product in-context/lifestyle (useful for scene reference)",
+          "Product packaging/unboxing (useful for unboxing hook ads)"
+        ],
+        "naming": "[product-name]-front.jpg, [product-name]-back.jpg, [product-name]-lifestyle.jpg",
+        "future": "AUTO-DOWNLOAD: When image scraping is available, automatically download all product images from store pages and save to products folder"
+      },
+      {
+        "step": 11,
+        "action": "Create audience persona(s)",
+        "minimum": "1 primary persona for the star product",
+        "template_fields": [
+          "name (memorable archetype name)",
+          "age_range, gender",
+          "description (who they are in 2-3 sentences)",
+          "demographics (income, location, education, lifestyle)",
+          "pain_points (what problems drive them to this product)",
+          "what_converts_her (what makes her buy)",
+          "objections (why she might NOT buy, and the counter)",
+          "platforms (where she scrolls)",
+          "ad_character_match (should look like / should NOT look like)"
+        ]
+      }
+    ]
+  },
+
+  "phase_4_validation": {
+    "name": "Vault Quality Check",
+    "steps": [
+      {
+        "step": 12,
+        "action": "Verify completeness",
+        "checklist": [
+          "brand.json exists and has all fields",
+          "Star product .json exists with pricing, packaging, ad_angles",
+          "At least 1 product reference image saved",
+          "At least 1 audience persona created",
+          "Campaign folder created with empty subfolders",
+          "All pricing matches DTC store (not third-party sites)"
+        ]
+      },
+      {
+        "step": 13,
+        "action": "Present onboarding summary to user",
+        "output_format": {
+          "brand_name": "[name]",
+          "websites": ["list all"],
+          "products_found": ["name — $price each"],
+          "star_product": "[name] — [why]",
+          "primary_persona": "[name] — [1 sentence]",
+          "product_images": "[count] images saved",
+          "missing_items": ["anything we still need from client"],
+          "recommended_next_step": "Generate 10 ad concepts for [star product] targeting [persona]"
+        }
+      }
+    ]
+  },
+
+  "phase_5_fast_track": {
+    "name": "Optional: Immediate Concept Generation",
+    "description": "If user wants to move fast, skip approval and go straight to concepts",
+    "steps": [
+      {
+        "step": 14,
+        "action": "Generate 10 ad concepts using concept-generator framework",
+        "inputs": "star product + primary persona + hook-types.json"
+      },
+      {
+        "step": 15,
+        "action": "Present concepts for approval",
+        "output": "10 concepts with confidence ratings, top 3 recommended"
+      }
+    ]
+  },
+
+  "future_automation": {
+    "image_auto_download": {
+      "status": "NOT YET BUILT",
+      "plan": "When running in Claude Code or n8n: automatically scrape all <img> tags from product pages, filter for product shots (not icons/decorative), download to products folder, name appropriately",
+      "tech": "Puppeteer or Playwright for JS, or requests + BeautifulSoup for Python"
+    },
+    "competitor_ad_scraping": {
+      "status": "NOT YET BUILT",
+      "plan": "Pull competitor ads from Meta Ad Library to see what angles and hooks they're using. Feed into concept generator for differentiation",
+      "tech": "Meta Ad Library API or scraper"
+    },
+    "social_proof_aggregation": {
+      "status": "NOT YET BUILT",
+      "plan": "Pull Google reviews, Trustpilot, Amazon reviews automatically. Extract themes and real quotes for testimonial angles",
+      "tech": "Review scraping APIs or manual extraction"
+    }
+  }
+}

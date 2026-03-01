@@ -1,0 +1,80 @@
+{
+  "product": {
+    "name": "Daily Essentials Shake",
+    "variant": "Chocolate",
+    "sku": "DES-CHOC-30",
+    "type": "All-in-one meal replacement / supplement shake",
+    "price": "$59.99 (30 servings)",
+    "price_per_serving": "$2.00",
+
+    "packaging": {
+      "type": "Stand-up flexible pouch with resealable zip top",
+      "material": "Matte flexible plastic, slightly crinkly when handled",
+      "dimensions": {
+        "height_cm": 25,
+        "height_inches": 10,
+        "width_cm": 18,
+        "width_inches": 7,
+        "depth_when_filled_cm": 8,
+        "depth_when_filled_inches": 3
+      },
+      "weight_when_full": "~500g, sags slightly in hand, not rigid",
+      "weight_when_partial": "~250g, more flexible, collapses slightly",
+      "colors": {
+        "top_half": "Turquoise/teal (#4ECDC4)",
+        "bottom_half": "Chocolate brown (#5D4037)",
+        "text": "White and cream"
+      },
+      "label_elements": [
+        "LYFEfuel logo (white, top-left of turquoise section)",
+        "Brown tree/plant icon (center of turquoise section)",
+        "ALL-IN-ONE heading (white on brown)",
+        "DAILY ESSENTIALS SHAKE (large, cream on brown)",
+        "3 stat boxes: 25 Whole Food Ingredients | 18g Plant-Based Protein | 2g All-Natural Sugar",
+        "6 benefit boxes: Probiotics, Antioxidants, Super Greens, Digestive Enzymes, Vitamins & Minerals, D3/B12/K2/Mg/Co-Q10",
+        "Bottom badges: NON-GMO, NO SOY, NOTHING ARTIFICIAL, NO DAIRY, VEGAN",
+        "CHOCOLATE flavor callout"
+      ],
+      "scale_in_hand": "Pouch height is roughly 1.5x a woman's hand-span. When held at chest level, top of pouch reaches chin area, bottom at mid-chest. Wider than a hand grip so fingers wrap around the middle, slightly crumpling the sides"
+    },
+
+    "reference_images": {
+      "front_packshot": "daily-essentials-front.jpg",
+      "notes": "Additional angles (back, side, lifestyle) should be added as available"
+    },
+
+    "key_claims": [
+      "25 whole food ingredients",
+      "18g plant-based protein",
+      "2g all-natural sugar",
+      "Probiotics for immunity & healthy gut",
+      "Antioxidants for fighting free radicals",
+      "Super greens for internal alkalinity",
+      "Digestive enzymes for nutrient absorption",
+      "D3, B12, K2, Mg, Co-Q10 for nutritional gaps"
+    ],
+
+    "usage_context": {
+      "when": "Morning routine, breakfast replacement or addition",
+      "how": "Mix with water, milk, or blend into smoothie",
+      "props_in_scene": ["Blender or shaker bottle", "Water glass", "Kitchen counter", "Morning light"],
+      "daily_habit_signal": "Pouch sitting on counter near coffee maker, partially used (not brand new)"
+    },
+
+    "ad_angles": {
+      "strongest_hooks": [
+        "The 'all-in-one' simplicity (replaces 5+ supplements)",
+        "Ingredient transparency (actually showing what's inside)",
+        "Taste surprise (chocolate flavor that's actually good)",
+        "Morning routine transformation (one scoop, done)",
+        "Skeptic conversion (tried everything, this actually works)"
+      ],
+      "proof_points": [
+        "25 ingredients listed on label (visible, verifiable)",
+        "No artificial anything",
+        "How you feel after 2 weeks (energy, digestion, skin)",
+        "Price per serving vs buying each supplement separately"
+      ]
+    }
+  }
+}

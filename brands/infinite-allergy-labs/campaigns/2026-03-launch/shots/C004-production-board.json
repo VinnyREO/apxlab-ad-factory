@@ -1,0 +1,233 @@
+{
+  "_format": "PRODUCTION_BOARD",
+  "_version": "1.0",
+  "_description": "Shot-by-shot production guide. Each shot tells you exactly what to attach, what to paste, and what you get. Follow in order — outputs feed into next shots.",
+
+  "ad": {
+    "id": "C004",
+    "name": "Symptom Stack — Sound Familiar?",
+    "duration": "15 seconds",
+    "format": "9:16 vertical",
+    "hook_line": "Bloating. Fatigue. Brain fog. Skin flare-ups. Sound familiar?",
+    "avatar": "Bea",
+    "product": "F.A.S.T. Panel Combo Kit"
+  },
+
+  "storyboard": [
+    "0-3s  → HOOK: Bathroom mirror, tired morning, examining herself",
+    "3-4s  → HOOK: Breaks fourth wall, 'Sound familiar?' direct look",
+    "4-8s  → BODY: Kitchen counter, everyday foods, test kit revealed",
+    "8-11s → PROOF: Holding test kit close-up, examining it",
+    "11-13s → RESULT: Kitchen, better light, calm clarity face",
+    "13-15s → CTA: Product on counter, morning light, text overlay"
+  ],
+
+  "shots": [
+
+    {
+      "shot_id": "C004-01",
+      "name": "Bathroom Mirror — Tired Morning",
+      "what_this_is": "The scroll-stopper. She's in the bathroom examining herself, exhausted",
+      "second": "0-3s",
+      "text_overlay": "Bloating. Fatigue. Brain fog. Skin flare-ups.",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg (her face)"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Bea avatar reference for face identity",
+
+        "subject": "Subject is a 35-year-old American woman, South Asian-American heritage, medium brown skin with warm golden undertones. KEY IDENTITY MARKERS: (1) distinctive white/grey streak starting at left temple, approximately 1cm wide — very visible against dark hair, (2) small horizontal scar on chin, 8mm, slightly indented, (3) asymmetric eyebrows — left straighter/thinner, right higher arch. Hair dark brown/black in loose messy bun, pieces escaping. Under-eye circles are brown hyperpigmentation. Gold nose stud left nostril. Mismatched earrings: left small gold hoop, right tiny gold stud. No makeup. MATCH THE ATTACHED REFERENCE IMAGE FOR FACE IDENTITY",
+        "apparel": "Oversized sleep shirt, washed-out grey or white, too big for her. Slipping off one shoulder slightly. Slept in this",
+        "expression": "Tired resignation. Looking at herself — not at the camera lens, but at her own reflection (gaze 2-3 degrees downward-right). Examining her face and how tired she looks. Not dramatic, not crying. Just over it. The 'here we go again' morning face. Mouth closed, corners neutral-to-slightly-down. Eyes steady but heavy",
+        "action": "Standing in front of bathroom mirror. One hand touching her jaw/chin area, examining her skin. Head tilted slightly. Morning stillness",
+        "camera": {
+          "device": "iPhone 15 Pro front camera",
+          "DOF": "DEEP — everything in sharp focus, NO blur, NO portrait mode",
+          "framing": "Head, shoulders, upper chest. Slightly off-center. Selfie distance. Horizon tilted 2 degrees. Natural imperfect composition",
+          "format": "9:16 vertical"
+        },
+        "lighting": "Bathroom morning light. Overhead cool fluorescent mixed with soft window light from right. Unflattering — shows every under-eye circle, every skin texture. This is real morning light, not golden hour",
+        "environment": "Bathroom. Mirror edge visible at frame edge. Toiletries slightly blurred on shelf behind her. White/beige tiles. Bathroom fan humming energy. All in sharp focus",
+        "negative_prompt": ["background blur", "bokeh", "portrait mode", "studio lighting", "ring light", "perfect skin", "airbrushed", "makeup", "styled hair", "smiling", "posing", "phone in hand", "holding phone"]
+      },
+
+      "output_becomes": "C004-01.jpg → Use as reference for C004-02 (Frame B)"
+    },
+
+    {
+      "shot_id": "C004-02",
+      "name": "Fourth Wall Break — 'Sound Familiar?'",
+      "what_this_is": "Same scene but she looks directly at camera. Connection moment",
+      "second": "3-4s",
+      "text_overlay": "Sound familiar?",
+
+      "attach": {
+        "reference_1": "C004-01.jpg (the output from previous shot — this is Frame A)"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Frame A (C004-01) — the bathroom mirror shot. This is the ONLY reference. Generate Frame B from this",
+
+        "instruction": "Starting from the attached Frame A image, generate Frame B where ONLY the expression changes. Everything else stays identical — same bathroom, same clothes, same lighting, same framing, same hand position",
+        "expression_change": "Her gaze shifts from looking at herself (down-right) to looking DIRECTLY into the camera lens. Direct eye contact. Right eyebrow lifts slightly higher (her natural asymmetry). Lips press together then release — a knowing look. 'Yeah, you too, right?' energy. This is the fourth wall break — she acknowledges the viewer. Expression at 30% intensity — subtle, not theatrical",
+        "what_stays_same": "EVERYTHING except the expression and gaze direction. Same bathroom. Same lighting. Same clothes. Same hand position. Same background. Same framing",
+
+        "negative_prompt": ["different room", "different clothes", "different lighting", "different angle", "different hair", "smiling big", "laughing", "exaggerated expression", "new background"]
+      },
+
+      "output_becomes": "C004-02.jpg → Combine with C004-01 in Veo for the animated hook",
+      "veo_note": "C004-01 + C004-02 → Veo interpolation → 2-3 second animated clip of the gaze shift"
+    },
+
+    {
+      "shot_id": "C004-03",
+      "name": "Kitchen Counter — Food Trigger Reveal",
+      "what_this_is": "New scene. Kitchen. Everyday foods on counter with test kit visible among them",
+      "second": "4-8s",
+      "text_overlay": "these could be caused by foods you eat every single day",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg (her face)",
+        "reference_2": "products/combo-kit-front.jpg (the test kit box)"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: (1) Bea avatar reference for face identity, (2) Combo test kit product image for product accuracy",
+
+        "subject": "Same woman from avatar reference. KEY IDENTITY MARKERS: white/grey streak left temple, chin scar, asymmetric brows. Messy bun, no makeup, faded black v-neck tee (her default). MATCH THE ATTACHED AVATAR REFERENCE FOR FACE IDENTITY",
+        "expression": "Looking down at the counter with a questioning expression. 'Could it really be you?' directed at the foods. Slight furrow between brows. Mouth slightly open (2-3mm). Curious but skeptical",
+        "scene": "Kitchen counter from slightly above (she's standing, we see her from chest up + the counter surface). On the counter: a slice of bread, two eggs, a yogurt container, and a coffee mug — normal everyday breakfast items. The INFINITE ALLERGY LABS test kit box (FROM ATTACHED PRODUCT REFERENCE) is on the counter BEHIND the foods, partially visible. The foods are the visual focus, the test kit is secondary — emerging from among them",
+        "product_instructions": "The test kit box must MATCH THE ATTACHED PRODUCT REFERENCE exactly — white rectangular box with navy INFINITE branding and geometric logo. The box is on the counter surface among the food items, not held. Natural placement, not displayed",
+        "camera": {
+          "device": "iPhone 15 Pro",
+          "DOF": "DEEP — sharp focus on face AND counter AND foods AND product",
+          "framing": "Medium shot — her chest/shoulders + counter surface with items. 9:16 vertical",
+          "angle": "Slightly elevated, looking down at counter but her face is visible"
+        },
+        "lighting": "Kitchen morning light. Warmer than the bathroom (this scene is slightly more hopeful). Window light from left. Natural kitchen ambient",
+        "environment": "Clean but lived-in kitchen. Neutral countertop. Maybe a cutting board edge visible. Morning context",
+        "negative_prompt": ["background blur", "bokeh", "portrait mode", "studio lighting", "wrong product", "product text generated", "product logo wrong", "holding product", "smiling", "posing"]
+      },
+
+      "output_becomes": "C004-03.jpg"
+    },
+
+    {
+      "shot_id": "C004-04",
+      "name": "Product Close-Up — Examining the Kit",
+      "what_this_is": "Close-up of her hands holding the test kit. She's deciding, not presenting",
+      "second": "8-11s",
+      "text_overlay": "88 foods tested · 4 immune pathways · results in 3-5 days",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg (her face — for hand/skin tone consistency)",
+        "reference_2": "products/combo-kit-front.jpg (the test kit box)"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: (1) Bea avatar reference for skin tone and hand consistency, (2) Combo test kit product image",
+
+        "shot_type": "HANDS + PRODUCT close-up. Her face is NOT in this shot or is barely visible at top edge of frame. This is about her HANDS holding the test kit box",
+        "hands": "Medium brown skin with warm golden undertones (matching avatar reference). Black hair tie on right wrist. Nails are short, unpolished, slightly uneven — real nails. Fingers wrap around the short edge of the box. Casual grip like she just picked it up, not a display hold",
+        "product_instructions": "The test kit box must MATCH THE ATTACHED PRODUCT REFERENCE exactly — white rectangular box, navy INFINITE wordmark at top, large navy geometric logo center, product name at bottom in navy. Box is approximately 22cm wide. Her thumb is near the branding, casually. Box is the hero of this shot",
+        "camera": {
+          "device": "iPhone 15 Pro",
+          "DOF": "DEEP — hands and product both in sharp focus",
+          "framing": "Close-up of hands holding box. Maybe chin/lower face visible at very top of frame. Counter surface visible below. 9:16 vertical",
+          "angle": "Slightly above, looking down at her hands and the box"
+        },
+        "lighting": "Same kitchen lighting as C004-03. Warm morning light. Product branding clearly readable",
+        "negative_prompt": ["background blur", "bokeh", "wrong product", "product text wrong", "logo wrong", "manicured nails", "nail polish", "studio lighting", "floating product"]
+      },
+
+      "output_becomes": "C004-04.jpg"
+    },
+
+    {
+      "shot_id": "C004-05",
+      "name": "Clarity Face — The 'After'",
+      "what_this_is": "Back to her face. Same kitchen but she looks calmer. Tension gone. The subtle 'after'",
+      "second": "11-13s",
+      "text_overlay": "finally knowing > forever guessing",
+
+      "attach": {
+        "reference_1": "avatars/bea/reference.jpg (her face)"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Bea avatar reference for face identity",
+
+        "subject": "Same woman from avatar reference. KEY IDENTITY MARKERS: white/grey streak left temple, chin scar, asymmetric brows. Messy bun (slightly neater than bathroom scene — she's had some coffee). Faded black v-neck tee. MATCH THE ATTACHED AVATAR REFERENCE FOR FACE IDENTITY",
+        "expression": "Quiet clarity. NOT a big smile. Settled. The tension from the bathroom morning scene is GONE. Eyes steady, face relaxed, jaw unclenched. A barely-there half smile — left side lifts slightly before right (her natural pattern). Warm eyes. 'I finally have a path forward' energy. Expression at 30% — this is SUBTLE relief, not celebration",
+        "camera": {
+          "device": "iPhone 15 Pro front camera",
+          "DOF": "DEEP — no blur",
+          "framing": "Head and shoulders. Selfie distance. Slightly off-center. 9:16 vertical",
+          "format": "9:16 vertical"
+        },
+        "lighting": "Kitchen but BETTER light than the bathroom — warmer, softer, more flattering. Window light from left. This isn't dramatic before/after — just slightly better light suggesting later in the day or a better angle. The improvement is in HER FACE (relaxed, calm), not in dramatic lighting change",
+        "environment": "Kitchen background, soft focus ok here since face is the focus. Clean, bright, morning",
+        "negative_prompt": ["background blur", "bokeh", "portrait mode", "studio lighting", "big smile", "laughing", "teeth showing", "dramatic transformation", "different person", "makeup added", "perfect skin"]
+      },
+
+      "output_becomes": "C004-05.jpg"
+    },
+
+    {
+      "shot_id": "C004-06",
+      "name": "Product on Counter — CTA Shot",
+      "what_this_is": "The test kit box on her kitchen counter. Clean, simple. Text overlay does the selling",
+      "second": "13-15s",
+      "text_overlay": "most insurance accepted · free dietitian review · link in bio",
+
+      "attach": {
+        "reference_1": "products/combo-kit-front.jpg (the test kit box)"
+      },
+
+      "prompt": {
+        "reference_images": "Attached: Combo test kit product image. Box must match this exactly",
+
+        "shot_type": "PRODUCT LIFESTYLE. No face in this shot. The test kit box is the subject. But this is NOT a studio packshot — it's the box sitting naturally in her kitchen",
+        "product_instructions": "The INFINITE ALLERGY LABS test kit box from the attached reference — white box, navy branding, geometric logo. Sitting flat on a kitchen counter. Slightly angled (not perfectly straight — real placement). Box is clean but not pristine",
+        "context": "Kitchen counter surface. A coffee mug nearby (half-full). Maybe the edge of her hand/wrist resting near the box (brown skin, black hair tie on wrist if hand visible). Morning light. The box is IN HER LIFE, not in a studio",
+        "camera": {
+          "device": "iPhone 15 Pro",
+          "DOF": "DEEP — product and counter both sharp",
+          "framing": "Close-up of product on surface. Counter fills lower 2/3 of frame. 9:16 vertical",
+          "angle": "Slightly above, looking down at counter"
+        },
+        "lighting": "Warm morning kitchen light. Window light from left. Product branding clearly readable. Soft shadows",
+        "negative_prompt": ["studio lighting", "white background", "floating product", "product mockup", "perfectly centered", "wrong branding", "wrong logo", "photoshop composite"]
+      },
+
+      "output_becomes": "C004-06.jpg → Final shot. All 6 shots complete"
+    }
+  ],
+
+  "production_summary": {
+    "total_shots": 6,
+    "generations_needed": [
+      "C004-01: Avatar ref → GENERATE → bathroom scene",
+      "C004-02: C004-01 output → GENERATE → expression shift (Frame B)",
+      "C004-03: Avatar ref + Product ref → GENERATE → kitchen with foods + kit",
+      "C004-04: Avatar ref + Product ref → GENERATE → hands holding kit",
+      "C004-05: Avatar ref → GENERATE → calm clarity face",
+      "C004-06: Product ref only → GENERATE → product on counter"
+    ],
+    "reference_images_needed": {
+      "bea_reference": "avatars/bea/reference.jpg",
+      "product_reference": "products/combo-kit-front.jpg"
+    },
+    "veo_animations": [
+      "C004-01 + C004-02 → 2-3s clip (bathroom gaze shift)"
+    ],
+    "editing_notes": {
+      "sequence": "01 → (animate to) 02 → 03 → 04 → 05 → 06",
+      "text_overlays_added_in_edit": true,
+      "music": "Quiet ambient. No upbeat music. Reflective/personal tone",
+      "transitions": "Simple cuts. No effects. UGC doesn't use transitions"
+    }
+  }
+}

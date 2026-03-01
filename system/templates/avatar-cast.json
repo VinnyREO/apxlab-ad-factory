@@ -1,0 +1,66 @@
+{
+  "_template": "AVATAR_CAST",
+  "_version": "5.1",
+  "_description": "Generate character with neutral expression for identity lock. Stage 1 of pipeline. CLEAN REFERENCE ONLY — no scene, no reaction, no product, no props, no hands. Just the person's face and shoulders.",
+  "_usage": "Fill [FILL] fields from brand audience persona and character spec. Generate 3-4 variations. Pick the best face. That becomes the locked reference for all future shots.",
+  "_lessons": [
+    "V5.0 → V5.1: Phone was appearing in frame because prompt mentioned 'looking at phone camera'. Removed all phone references from expression/gaze. Added phone/hands to negative prompt",
+    "V5.0 → V5.1: Added market context field — character should read as part of the brand's target market (e.g. American woman, not just ethnicity)",
+    "V5.0 → V5.1: Simplified framing to centered head+shoulders. The off-center tilt is for SCENE shots, not avatar lock. Lock shots need clean, repeatable reference",
+    "V5.0 → V5.1: Added explicit 'this is a AVATAR REFERENCE' note to environment to prevent models from building elaborate scenes",
+    "INSIGHT: Detailed signature details (grey streak, chin scar, asymmetric brows) produce consistent characters even across separate generations WITHOUT a reference image. The verbal fingerprint works"
+  ],
+
+  "reference_images": "NONE — this template is for generating a NEW character. No reference images attached",
+
+  "subject": {
+    "demographics": "[FILL: age, skin tone, heritage. IMPORTANT: include market context — e.g. 'American woman, South Asian-American heritage' not just 'South Asian'. The character should read as part of the brand's target market]",
+    "signature_details": {
+      "primary": "[FILL: THE lock detail. Face anchor tier. Must be visible in every frame at any angle. Best: unique hair feature, prominent mark, distinctive scar. This is how you verify identity across generations]",
+      "secondary": "[FILL: Second identifier. Can be face or style anchor. Best: facial scar, birthmark, unique feature. Should be visible in close-ups]",
+      "tertiary": "[FILL: Third subtle detail. Asymmetry or micro-feature. Best: eyebrow asymmetry, tooth gap, ear detail. Adds realism and catches model drift]"
+    },
+    "hair": "[FILL: type, color, length, texture, current state. Be VERY specific — this is a major identity anchor. Include day-of-hair state (freshly washed vs day-two vs messy)]",
+    "skin_details": "[FILL: REAL skin. Pores, blemishes, under-eye details, lip condition, texture. Reinforce signature details here. Specify the TYPE of under-eye circles (purple/blue for fair skin, brown hyperpigmentation for darker skin). Include at least one imperfection that isn't a signature detail]",
+    "apparel": "[FILL: simple home clothes. Include wear details (fading, pilling, stains). Nothing that competes with face. Keep neutral colors so face is the focus]",
+    "accessories": "[FILL: minimal but specific. These become consistency markers across scenes. Max 3 items. Include exact details (size, material, which side)]"
+  },
+
+  "expression": {
+    "type": "NEUTRAL for avatar lock. Natural resting face. Not reacting, not posing, not smiling. Just her face at rest — the expression she'd have staring at nothing in particular",
+    "micro_expression": "[FILL: describe how signature details affect resting expression — e.g. 'asymmetric brows give subtle skeptical quality at rest']",
+    "gaze": "Looking 2-3 degrees right of lens. Calm, slightly unfocused gaze. NOT looking at a phone. NOT looking at anything specific. Just a neutral soft gaze slightly off-axis"
+  },
+
+  "camera": {
+    "device": "iPhone 15 Pro front camera",
+    "DOF": "DEEP. Everything in sharp focus. NO blur. NO portrait mode",
+    "framing": "Head and shoulders ONLY. Centered. Clean and simple. NO hands in frame. NO phone visible. NO props. NO objects being held. Just face, neck, and upper shoulders against a simple background. This is a AVATAR REFERENCE image — keep it clean",
+    "distance": "Arm's length selfie distance"
+  },
+
+  "lighting": {
+    "source": "Soft natural window light from the left. Warm, diffused. Subtle shadow on right side of face",
+    "quality": "Flattering but natural. Not studio, not harsh"
+  },
+
+  "environment": {
+    "setting": "Simple neutral background. Plain wall or minimal home interior. Background is NOT important — this is a AVATAR REFERENCE shot. All attention on her face. Keep it clean and undistracting",
+    "note": "THIS IS A AVATAR LOCK IMAGE. No elaborate scene. No context. No story. Just the person. Scene-specific settings come in Stage 2 (scene-expression template)"
+  },
+
+  "negative_prompt": [
+    "phone in frame", "holding phone", "hand in frame", "hands visible",
+    "mirror selfie", "holding anything", "props in frame",
+    "background blur", "bokeh", "bokeh balls", "shallow depth of field",
+    "portrait mode", "gaussian blur", "DSLR quality",
+    "studio lighting", "ring light", "ring light catch lights", "softbox",
+    "beauty dish", "three-point lighting",
+    "perfect skin", "porcelain skin", "airbrushed", "smooth skin filter",
+    "beauty mode", "facetune", "pore removal",
+    "model pose", "stock photo", "editorial", "magazine", "professional photo",
+    "makeup", "foundation", "contour", "lipstick", "mascara",
+    "styled hair", "salon hair", "hair product", "glossy hair",
+    "smiling", "laughing", "exaggerated expression", "posing"
+  ]
+}

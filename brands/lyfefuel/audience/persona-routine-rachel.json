@@ -1,0 +1,39 @@
+{
+  "persona": {
+    "name": "Routine Rachel",
+    "age_range": "25-32",
+    "gender": "Female",
+    "description": "Already into wellness but wants to simplify. Currently takes a greens powder, separate protein, multivitamin, and probiotic. Knows what she wants but is overwhelmed by the complexity. She's looking for one thing that covers it all.",
+
+    "demographics": {
+      "income": "$45K-75K",
+      "location": "Urban US",
+      "education": "College educated",
+      "lifestyle": "Active, does yoga or light fitness, meal preps sometimes, follows wellness creators"
+    },
+
+    "pain_points": [
+      "Morning supplement routine takes too long (5 different things)",
+      "Spending $150+/month on separate supplements",
+      "Cabinet full of half-used supplement bottles",
+      "Wants plant-based but protein powders taste awful",
+      "Decision fatigue from too many options"
+    ],
+
+    "what_converts_her": [
+      "The simplicity angle (one scoop replaces everything)",
+      "Cost comparison (this vs her current stack)",
+      "Taste testimonials (actually good chocolate)",
+      "Clean ingredients she recognizes",
+      "Morning routine content (quick, easy, done)"
+    ],
+
+    "platforms": ["Instagram Reels", "TikTok", "Pinterest"],
+    "content_consumption": "Engages with wellness content, saves recipes, follows routine-style content. Likes 'what I eat in a day' formats",
+
+    "ad_character_match": {
+      "should_look_like": "Slightly younger, more 'wellness-adjacent'. Someone who clearly takes care of themselves but isn't obsessive. Athleisure at home. Cleaner kitchen but still real",
+      "should_NOT_look_like": "Gym bro, hardcore fitness, too polished, or too messy"
+    }
+  }
+}

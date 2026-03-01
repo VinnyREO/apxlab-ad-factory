@@ -1,0 +1,61 @@
+{
+  "_shot": "AVATAR_CAST",
+  "_avatar": "Tired Eyes Tara",
+  "_instructions": "Paste this entire JSON into Nano Banana 2. No reference images needed. Generate 3-4 variations and pick the best",
+
+  "reference_images": "NONE — generating new avatar",
+
+  "subject": {
+    "demographics": "American woman, 33, fair skin with warm undertones, Eastern European-American heritage. Born and raised in the US — think New York or Chicago suburbs",
+    "signature_details": {
+      "primary": "Deep-set under-eye hollows with visible purple-blue veins beneath thin under-eye skin. NOT just dark circles — the actual veins are visible through translucent fair skin under the eyes. Genetic + sleep deprivation combo. This is her defining feature, visible from any distance",
+      "secondary": "Small cluster of 4 tiny raised moles along right jawline near ear, descending like a trail. Each mole is 1-2mm, slightly darker than skin, spaced about 5mm apart in a diagonal line from earlobe toward jaw corner",
+      "tertiary": "Slightly crooked front bottom teeth — one overlaps the other by 2mm. Only visible when mouth opens slightly or when she speaks"
+    },
+    "hair": "Sandy brown, fine texture, shoulder-length. Day-three flat roots, greasy at the crown, dry splitting ends. Pushed behind both ears, no clip, no style. The hair of someone who stopped caring about it 2 days ago. Natural color, no highlights, no dye — just mousey sandy brown",
+    "skin_details": "Fair with warm undertones but currently looking dull and sallow. The under-eye hollows are the dominant feature — purple-blue veins visible through thin translucent skin. Visible pores on nose and inner cheeks. Redness around nostrils and chin (mild irritation/sensitivity — the kind from constantly blowing nose or rubbing face). Dry flaky patches on cheekbones. One active small red blemish on left temple. Lips are pale pink, lower lip slightly chapped with one small crack",
+    "apparel": "Oversized heather grey crewneck sweatshirt, well-worn — pilling at cuffs, faded from 100+ washes, stretched neckline showing collarbone. No bra strap visible. The sweatshirt is too big (probably partner's or bought oversized)",
+    "accessories": [
+      "Thin silver chain necklace with tiny disc pendant (6mm diameter, plain, no engraving) sitting in collarbone hollow",
+      "Small silver stud earrings in first holes, second piercing holes empty (grew closed)",
+      "Stretched-out burgundy velvet scrunchie on left wrist — been there for days"
+    ]
+  },
+
+  "expression": {
+    "type": "NEUTRAL for avatar lock. Natural resting face. Not reacting, not posing, not smiling. The face of someone running on 5 hours of fragmented sleep — just existing",
+    "micro_expression": "The deep-set under-eye hollows give a permanent exhausted quality even when expression is neutral. Mouth corners naturally neutral-to-slightly-down. Eyes slightly narrowed — not squinting, just tired. Overall impression: 'I need coffee but even coffee isn't fixing this anymore'",
+    "gaze": "Looking 2-3 degrees right of lens. Slightly unfocused, tired gaze. The 'staring at nothing' look"
+  },
+
+  "camera": {
+    "device": "iPhone 15 Pro front camera",
+    "DOF": "DEEP. Everything in sharp focus. NO blur. NO portrait mode",
+    "framing": "Head and shoulders ONLY. Centered. Clean and simple. NO hands in frame. NO phone visible. NO props. Just face, neck, and upper shoulders against a simple background",
+    "distance": "Arm's length selfie distance"
+  },
+
+  "lighting": {
+    "source": "Soft natural window light from the left. Cool morning light (not warm/golden — she looks washed out). Subtle shadow on right side of face",
+    "note": "The lighting should make the under-eye veins and hollows MORE visible, not less. No flattering warm light that hides her tiredness"
+  },
+
+  "environment": {
+    "setting": "Simple neutral background. Plain light-colored wall. THIS IS AN AVATAR REFERENCE — no elaborate scene. All attention on her face",
+    "note": "AVATAR LOCK IMAGE. No context. No story. Just the person"
+  },
+
+  "negative_prompt": [
+    "phone in frame", "holding phone", "hand in frame", "hands visible",
+    "mirror selfie", "holding anything", "props in frame",
+    "background blur", "bokeh", "shallow depth of field", "portrait mode",
+    "studio lighting", "ring light", "softbox",
+    "perfect skin", "airbrushed", "smooth skin", "beauty mode", "facetune",
+    "concealer under eyes", "covered dark circles", "even skin tone",
+    "model pose", "stock photo", "editorial", "magazine",
+    "makeup", "foundation", "contour", "lipstick", "mascara",
+    "styled hair", "salon hair", "bouncy hair", "shiny hair",
+    "smiling", "laughing", "exaggerated expression", "posing",
+    "missing under-eye hollows", "smooth under-eyes", "bright eyes"
+  ]
+}

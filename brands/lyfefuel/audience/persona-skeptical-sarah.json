@@ -1,0 +1,39 @@
+{
+  "persona": {
+    "name": "Skeptical Sarah",
+    "age_range": "28-35",
+    "gender": "Female",
+    "description": "Health-conscious but jaded by supplement marketing. Has tried AG1, random Amazon vitamins, maybe a greens powder. Nothing stuck. She reads labels, Googles ingredients, and doesn't trust influencer recommendations. She needs to see proof before she buys.",
+
+    "demographics": {
+      "income": "$55K-90K",
+      "location": "Urban/suburban US",
+      "education": "College educated",
+      "lifestyle": "Busy professional, wants to be healthier but doesn't have time for complex routines"
+    },
+
+    "pain_points": [
+      "Takes 4-5 separate supplements every morning (vitamins, probiotics, greens) and hates it",
+      "Spent money on AG1 and didn't notice a difference",
+      "Doesn't trust 'miracle' supplement claims",
+      "Wants something that actually tastes good (not chalky/grassy)",
+      "Feels overwhelmed by supplement options"
+    ],
+
+    "what_converts_her": [
+      "Real person showing real, subtle results (not dramatic transformation)",
+      "Seeing the actual ingredients (transparency)",
+      "Hearing about experience after 2+ weeks (not instant miracle)",
+      "Price comparison showing value vs buying separately",
+      "Authentic UGC that doesn't feel like an ad"
+    ],
+
+    "platforms": ["Instagram Reels", "TikTok", "YouTube Shorts"],
+    "content_consumption": "Scrolls during morning coffee, lunch break, evening wind-down. Stops for relatable faces, not polished content",
+
+    "ad_character_match": {
+      "should_look_like": "Her or her friend. Late 20s to mid 30s. Not a fitness model. Real skin, real kitchen, real morning. Someone who has clearly tried other things and is genuinely surprised this works",
+      "should_NOT_look_like": "Influencer, model, fitness bro, anyone too put-together at 7am"
+    }
+  }
+}

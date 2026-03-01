@@ -1,0 +1,60 @@
+{
+  "_shot": "AVATAR_CAST",
+  "_avatar": "Exhausted Emma",
+  "_instructions": "Paste this entire JSON into Nano Banana 2. No reference images needed. Generate 3-4 variations and pick the best",
+
+  "reference_images": "NONE — generating new avatar",
+
+  "subject": {
+    "demographics": "American woman, 36, pale/fair skin, Northern European-American heritage (Irish/Scandinavian mix). Born and raised in the US — think Minnesota or Pacific Northwest",
+    "signature_details": {
+      "primary": "Dense freckle band across nose bridge and both cheeks — NOT cute scattered freckles. A concentrated BAND of 40-50 freckles that almost merge into each other across the nose bridge and fan out onto upper cheeks. Some freckles overlap. The band is the dominant facial feature, visible from any distance or angle",
+      "secondary": "Visible blue-green veins on both temples, close to the skin surface. More prominent when tired or stressed. A sign of thin fair skin — the veins show through",
+      "tertiary": "Slightly downturned mouth corners at rest, giving a natural 'tired/serious' resting expression even when completely neutral. NOT a frown — just natural downturn"
+    },
+    "hair": "Auburn/reddish-brown, fine, straight. Chin-length bob. Currently tucked behind both ears, showing the temples and temple veins. Visible roots slightly darker than the rest (2-3 weeks of growth). Bangs have grown out and are split-parted awkwardly, falling to either side and annoying her. Hair is clean but flat — no volume, no product, just exists",
+    "skin_details": "Very fair, almost translucent at temples and inner wrists — veins visible through the skin. The dense freckle band across nose bridge is the dominant feature — some freckles are 1mm, some 3mm, they cluster and overlap. Under-eye circles are pink-purple (fair skin shows vascular color underneath). Lips pale pink-beige, slightly bitten lower lip (small dry spot from nervous biting). Redness across nose bridge mixed with the freckles. Chin is slightly pink from sensitivity. One faint scratch on right cheek (pillow crease or nail scratch)",
+    "apparel": "Oversized navy blue henley — buttons undone, sleeves too long (covers her hands, 'sweater paws' effect, only fingertips visible). Well-loved, soft jersey material, slightly stretched collar showing collarbone and upper chest freckles. This is her comfort shirt",
+    "accessories": [
+      "No jewelry at all. She doesn't wear jewelry — her hands and neck are bare",
+      "One small bandaid on right index finger (paper cut or kitchen accident, slightly peeling at edges)",
+      "Simple black plastic hair clip pushing grown-out bangs to the right side — cheap, functional, not cute"
+    ]
+  },
+
+  "expression": {
+    "type": "NEUTRAL for avatar lock. Natural resting face. Not reacting, not posing, not smiling. The naturally downturned mouth corners make her look serious/tired even at rest — this is her actual neutral face",
+    "micro_expression": "Downturned mouth corners create a permanent 'not impressed' quality. Brows slightly furrowed from habitual tension (she carries stress in her forehead). Eyes steady but heavy-lidded. Overall impression: 'running on fumes but holding it together'",
+    "gaze": "Looking 2-3 degrees right of lens. Direct but tired. The 'I'm here but barely' look"
+  },
+
+  "camera": {
+    "device": "iPhone 15 Pro front camera",
+    "DOF": "DEEP. Everything in sharp focus. NO blur. NO portrait mode",
+    "framing": "Head and shoulders ONLY. Centered. Clean and simple. NO hands in frame. NO phone visible. NO props. Just face, neck, and upper shoulders against a simple background",
+    "distance": "Arm's length selfie distance"
+  },
+
+  "lighting": {
+    "source": "Soft natural window light from the left. Cool-neutral light. On fair skin this should reveal every freckle, vein, and under-eye circle — her skin hides nothing"
+  },
+
+  "environment": {
+    "setting": "Simple neutral background. Plain wall. AVATAR LOCK IMAGE — no elaborate scene",
+    "note": "AVATAR LOCK IMAGE. No context. No story. Just the person"
+  },
+
+  "negative_prompt": [
+    "phone in frame", "holding phone", "hand in frame", "hands visible",
+    "mirror selfie", "holding anything", "props in frame",
+    "background blur", "bokeh", "shallow depth of field", "portrait mode",
+    "studio lighting", "ring light", "softbox",
+    "perfect skin", "airbrushed", "smooth skin", "beauty mode", "facetune",
+    "no freckles", "faded freckles", "scattered freckles", "cute freckles",
+    "model pose", "stock photo", "editorial", "magazine",
+    "makeup", "foundation", "contour", "concealer", "lipstick", "mascara",
+    "styled hair", "salon hair", "volumized hair", "bouncy bob",
+    "smiling", "laughing", "upturned mouth", "exaggerated expression", "posing",
+    "hidden veins", "even skin tone", "rosy cheeks"
+  ]
+}

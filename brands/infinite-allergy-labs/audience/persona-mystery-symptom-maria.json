@@ -1,0 +1,54 @@
+{
+  "persona": {
+    "name": "Mystery Symptom Maria",
+    "age_range": "28-45",
+    "gender": "Primarily female (70/30 F/M for DTC health testing)",
+    "description": "Has been dealing with unexplained symptoms for months or years. Bloating, fatigue, skin issues, headaches — she's been to doctors who say 'everything looks normal' or 'try eliminating dairy.' She's frustrated, tired of guessing, and ready to pay for real answers. She's Googled her symptoms a hundred times and suspects food might be involved but doesn't know which foods.",
+
+    "demographics": {
+      "income": "$50K-100K",
+      "location": "US (all regions, suburban and urban)",
+      "education": "College educated, researches her health online",
+      "lifestyle": "Busy, health-aware but not health-obsessed. Has tried elimination diets halfheartedly. Willing to invest in answers"
+    },
+
+    "pain_points": [
+      "Unexplained chronic symptoms (bloating, fatigue, skin, headaches, brain fog)",
+      "Doctors haven't been helpful ('everything looks normal', 'it's probably stress')",
+      "Tried eliminating random foods but didn't see clear results",
+      "Doesn't know if it's food allergies, sensitivities, or something else",
+      "Feels like she's 'going crazy' or symptoms are 'in her head'",
+      "Overwhelmed by conflicting health info online",
+      "Previous allergy tests (skin prick) didn't catch anything but symptoms persist",
+      "Worried about cost but more worried about continuing to feel terrible"
+    ],
+
+    "what_converts_her": [
+      "Someone who LOOKS like her describing the SAME symptoms and getting answers",
+      "The revelation that standard tests only check 1-2 pathways (missing delayed reactions)",
+      "Seeing a sample color-coded report (tangible, real, not vague)",
+      "The insurance price point ($25 + $90 feels very different from $648)",
+      "Knowing a real dietitian will explain results (not left alone with data)",
+      "Speed: results in 3-5 days (she's been waiting months/years, this feels fast)",
+      "Simplicity: finger prick at home, mail it back. No doctor appointment needed",
+      "Emotional validation: 'your symptoms are REAL, here's what's causing them'"
+    ],
+
+    "objections": [
+      "Is this legit? (→ CLIA certified, COLA accredited, 1000+ providers)",
+      "It's expensive (→ insurance covers most of it, $25 + $90 with insurance)",
+      "I've done allergy tests before that didn't help (→ those tested 1-2 pathways, this tests 4)",
+      "Can I do this at home? (→ yes, finger prick option, no clinic needed)",
+      "How long until I feel better? (→ results in 3-5 days, dietary changes show results in 2-4 weeks)",
+      "Will my doctor accept these results? (→ CLIA/COLA certified, same as any lab)"
+    ],
+
+    "platforms": ["Instagram", "TikTok", "Facebook (skews older end of range)", "YouTube"],
+    "content_consumption": "Health content, symptom Googling, 'what I eat in a day', gut health content, chronic illness community. Stops scrolling for 'I finally found out why I...' content",
+
+    "ad_character_match": {
+      "should_look_like": "A woman who's been through it. Not sick-looking, but tired. Someone who could be your coworker, neighbor, friend. Real skin, real tiredness, but put-together enough that you trust her judgment. Mid-late 20s to early 40s",
+      "should_NOT_look_like": "Medical professional (unless testimonial), fitness influencer, visibly ill, too young (early 20s don't have this problem set yet), too polished"
+    }
+  }
+}
